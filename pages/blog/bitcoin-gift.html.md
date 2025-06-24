@@ -1,3 +1,8 @@
+---
+layout: post
+title: 9 ways to gift Bitcoin
+---
+
 # Bitcoin Gift
 
 

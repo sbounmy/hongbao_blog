@@ -26,4 +26,14 @@ module PageHelper
   def render_layout(layout, **kwargs, &block)
     render html: capture(&block), layout: "layouts/#{layout}", **kwargs
   end
+
+  # Accepts a `Dir.glob` pattern (e.g. `pages/*.html.*`) and sorts them in
+  # order as defined by the `order` Frontmatter key.
+  def ordered_pages(glob)
+    site.resources.glob(glob).sort_by { |r| r.data.fetch("order", Float::INFINITY) }
+  end
+
+  def date(date_string)
+    Date.parse(date_string) if date_string.present?
+  end
 end

@@ -1,0 +1,13 @@
+{
+  "name": "hongbao-blog",
+  "private": true,
+  "scripts": {
+    "build": "tailwindcss -i ./assets/stylesheets/site.css -o ./assets/stylesheets/tailwind.css --minify",
+    "watch": "tailwindcss -i ./assets/stylesheets/site.css -o ./assets/stylesheets/tailwind.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "daisyui": "^5.0.11",
+    "tailwindcss": "^4.1.3"
+  }
+}

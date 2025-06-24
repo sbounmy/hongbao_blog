@@ -1,0 +1,2 @@
+web: bundle exec sitepress serve
+css: npm run watch
