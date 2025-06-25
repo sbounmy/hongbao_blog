@@ -1,6 +1,9 @@
 ---
 layout: post
 title: 9 ways to gift Bitcoin
+description: Make your gift memorable for your loved ones
+date: 2025-06-26
+author: Stephane Bounmy
 ---
 
 # Bitcoin Gift

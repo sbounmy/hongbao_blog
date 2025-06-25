@@ -1,22 +1,45 @@
 ---
 title: Hongbao Blog
+description: News, updates, and stories about Hongbao and Bitcoin.
 posts: 10
 primary_page:
   title: Home
   order: 1
 ---
 
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-4xl font-bold mb-8 text-gray-800"><%= current_page.data.title %></h1>
+<div class="container mx-auto px-4 py-12 sm:py-16">
+  <div class="text-center mb-12 sm:mb-16">
+    <div class="mb-4">
+      <a href="/" class="inline-flex items-center text-3xl font-semibold text-black no-underline hover:opacity-75 transition-opacity">
+        <%= image_tag image_url("bitcoin-64x64.svg"), class: "h-10 w-10 mr-2" %>
+        <span>Hong₿ao</span>
+      </a>
+    </div>
+    <h1 class="text-4xl sm:text-5xl font-bold mt-4 text-gray-800"><%= current_page.data.title %></h1>
+    <% if current_page.data.description %>
+      <p class="mt-4 text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto"><%= current_page.data.description %></p>
+    <% end %>
+  </div>
 
-  <div class="space-y-4">
+  <div class="space-y-10 max-w-4xl mx-auto">
     <% ordered_pages("blog/*.html.md").each do |post| %>
-      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow duration-300">
-        <%= link_to post.data.title, post.url, class: "text-2xl font-bold text-gray-800 hover:text-blue-600" %>
-        <% if post.data.description %>
-          <p class="text-gray-600 mt-2"><%= post.data.description %></p>
+      <article class="flex flex-col sm:flex-row items-start sm:space-x-6">
+        <% if post.data.date %>
+          <div class="w-full sm:w-32 text-left sm:text-right flex-shrink-0 mb-2 sm:mb-0">
+            <time datetime="<%= post.data.date.iso8601 %>" class="text-gray-500 text-sm font-medium">
+              <%= post.data.date.strftime('%Y-%m-%d') %>
+            </time>
+          </div>
         <% end %>
-      </div>
+        <div class="flex-grow">
+          <h2 class="text-2xl font-bold">
+            <%= link_to post.data.title, post.url, class: "text-gray-800 hover:text-blue-600 transition-colors" %>
+          </h2>
+          <% if post.data.description %>
+            <p class="text-gray-600 mt-2"><%= post.data.description %></p>
+          <% end %>
+        </div>
+      </article>
     <% end %>
   </div>
 </div>

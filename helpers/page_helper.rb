@@ -30,7 +30,7 @@ module PageHelper
   # Accepts a `Dir.glob` pattern (e.g. `pages/*.html.*`) and sorts them in
   # order as defined by the `order` Frontmatter key.
   def ordered_pages(glob)
-    site.resources.glob(glob).sort_by { |r| r.data.fetch("order", Float::INFINITY) }
+    site.resources.glob(glob).sort_by { |r| -r.data.fetch("date", Date.today).to_time.to_i }
   end
 
   def date(date_string)
