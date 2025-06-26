@@ -1,0 +1,57 @@
+name: Deploy PR Preview to GH Pages Subfolder
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Set up Ruby 💎
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.1.2'
+          bundler-cache: true
+
+      - name: Setup Node.js 🟩
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Configure Sitepress for Sub-Path 🔧
+        run: |
+          # The base path is now just the PR number
+          PR_PATH="${{ github.event.number }}"
+          echo "Setting base_path to /$PR_PATH"
+          echo "Sitepress.config.base_path = '/$PR_PATH'" >> config/site.rb
+
+      - name: Install and Build 🔨
+        run: |
+          npm install
+          npm run build
+          bundle exec sitepress compile
+
+      - name: Deploy to gh-pages subfolder 🚀
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./build
+          destination_dir: ${{ github.event.number }} # Changed to just :id
+          keep_files: true
+
+      - name: Post Preview URL to PR 💬
+        uses: thollander/actions-comment-pull-request@v2
+        with:
+          message: |
+            ✅ **Deploy Preview Ready!**
+
+            A new preview has been deployed for your latest commit.
+
+            View Preview: https://your-username.github.io/hongbao_blog/${{ github.event.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

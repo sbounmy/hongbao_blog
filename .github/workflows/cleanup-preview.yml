@@ -1,0 +1,27 @@
+name: Cleanup PR Preview
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch 🛎️
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+
+      - name: Remove PR Preview Directory 🗑️
+        run: |
+          PR_PATH="${{ github.event.number }}" # Changed to just :id
+          echo "Removing directory: $PR_PATH"
+          git rm -r --ignore-unmatch $PR_PATH
+
+      - name: Commit and Push Deletion 🚀
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git commit -m "Cleanup preview for PR #${{ github.event.number }}" || echo "No changes to commit"
+          git push
