@@ -24,18 +24,20 @@ jobs:
           cache: 'yarn'
           cache-dependency-path: yarn.lock
 
-      - name: Configure Sitepress for Sub-Path 🔧
-        run: |
-          # The base path is now just the PR number
-          PR_PATH="${{ github.event.number }}"
-          echo "Setting base_path to /$PR_PATH"
-          echo "Sitepress.configure { |config| config.base_path = '/$PR_PATH' }" >> config/site.rb
-
       - name: Install and Build 🔨
         run: |
           yarn install
           yarn build
           bundle exec sitepress compile
+
+      - name: Rewrite Asset Paths for Subfolder Preview ✍️
+        run: |
+          PR_NUMBER=${{ github.event.number }}
+          BUILD_DIR="./app/content/build"
+          echo "Rewriting asset paths in $BUILD_DIR for preview under /$PR_NUMBER"
+          find $BUILD_DIR -type f -name '*.html' -print0 | xargs -0 sed -i -e "s|href=\"/|href=\"/$PR_NUMBER/|g" -e "s|src=\"/|src=\"/$PR_NUMBER/|g"
+          find $BUILD_DIR -type f -name '*.css' -print0 | xargs -0 sed -i "s|url('/|url('/$PR_NUMBER/|g"
+          echo "Path rewriting complete."
 
       - name: Deploy to gh-pages subfolder 🚀
         uses: peaceiris/actions-gh-pages@v3
