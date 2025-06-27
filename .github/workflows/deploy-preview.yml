@@ -44,13 +44,20 @@ jobs:
           find $BUILD_DIR -type f -name '*.css' -print0 | xargs -0 sed -i "s|url('/|url('/$REPO_NAME/$PR_NUMBER/|g"
           echo "Path rewriting complete."
 
+      - name: Prepare deployment directory 📁
+        run: |
+          PR_NUMBER=${{ github.event.number }}
+          DEPLOY_DIR="./gh-pages-deploy"
+          mkdir -p $DEPLOY_DIR
+          mv ./build $DEPLOY_DIR/$PR_NUMBER
+          touch $DEPLOY_DIR/.nojekyll
+
       - name: Deploy to gh-pages subfolder 🚀
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./build
-          destination_dir: ${{ github.event.number }} # Changed to just :id
+          publish_dir: ./gh-pages-deploy
           keep_files: true
 
       - name: Post Preview URL to PR 💬
