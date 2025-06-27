@@ -36,4 +36,8 @@ module PageHelper
   def date(date_string)
     Date.parse(date_string) if date_string.present?
   end
+
+  def satoshi_video_url
+    "https://drive.google.com/file/d/1SkxgeFFKGZfsk4ro7GwGhPJz8pJio7QP/preview"
+  end
 end

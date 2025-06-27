@@ -1,5 +1,13 @@
+---
+layout: site
+title: About
+description: About
+date: 2025-06-27
+author: Stephane Bounmy
+---
+
   <div class="w-full flex flex-col gap-8 items-center justify-center min-h-screen">
-  <%= render "shared/v2/header" %>
+  <%= render "shared/v2/header" rescue nil %>
   <div class="prose lg:prose-xl pb-8">
     <p class='lead'>
       Hong₿ao began with a personal story: a father wanting to gift Bitcoin to his son, as meaningfully as a traditional red envelope. Today, we're a team of 2, making Bitcoin gifting simple, beautiful, and self-custodial.
@@ -88,7 +96,6 @@
 </div>
 
   <div class="text-center space-y-4 pb-6 mx-auto">
-    <%= section_header(title: 'About', subtitle: 'The team behind the code') %>
     <p class="max-w-[750px] mx-auto text-lg text-muted-foreground sm:text-xl">
         When we are not crafting code, we are embracing our favorite role: being Bitcoin teachers. Together, we turn every gift into ₿!
     </p>
@@ -104,7 +111,7 @@
           <h3 class="text-xl font-bold">Stéphane</h3>
           <div class="flex items-center gap-2">
           <%= link_to "https://github.com/sbounmy", target: "_blank", rel: "noopener noreferrer" do %>
-            <%= github_icon %>
+            <%# github_icon %>
             <% end %>
             <%= link_to "https://www.linkedin.com/in/stephane-be/", target: "_blank", rel: "noopener noreferrer" do %>
               <%= image_tag "linkedin.svg", class: "h-6 w-6" %>
@@ -123,7 +130,7 @@
           <h3 class="text-xl font-bold">Salma</h3>
           <div class="flex items-center gap-2">
             <%= link_to "https://github.com/SalmaTalbi", target: "_blank", rel: "noopener noreferrer" do %>
-              <%= github_icon %>
+              <%# github_icon %>
             <% end %>
             <%= link_to "https://www.linkedin.com/in/salmatalbi/", target: "_blank", rel: "noopener noreferrer" do %>
               <%= image_tag "linkedin.svg", class: "h-6 w-6" %>
@@ -135,4 +142,4 @@
     </div>
   </div>
 
-  <%= render(ContributorsComponent.new) %>
+  <%= render(ContributorsComponent.new) rescue nil %>
