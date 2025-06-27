@@ -21,7 +21,8 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
-          cache: 'npm'
+          cache: 'yarn'
+          cache-dependency-path: yarn.lock
 
       - name: Configure Sitepress for Sub-Path 🔧
         run: |
@@ -32,8 +33,8 @@ jobs:
 
       - name: Install and Build 🔨
         run: |
-          npm install
-          npm run build
+          yarn install
+          yarn build
           bundle exec sitepress compile
 
       - name: Deploy to gh-pages subfolder 🚀
@@ -41,7 +42,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./build
+          publish_dir: ./app/content/build
           destination_dir: ${{ github.event.number }} # Changed to just :id
           keep_files: true
 
