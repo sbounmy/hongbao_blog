@@ -29,7 +29,7 @@ jobs:
           # The base path is now just the PR number
           PR_PATH="${{ github.event.number }}"
           echo "Setting base_path to /$PR_PATH"
-          echo "Sitepress.config.base_path = '/$PR_PATH'" >> config/site.rb
+          echo "Sitepress.configure { |config| config.base_path = '/$PR_PATH' }" >> config/site.rb
 
       - name: Install and Build 🔨
         run: |
