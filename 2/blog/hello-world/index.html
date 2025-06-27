@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hello World</title>
+    <link rel="stylesheet" href="/2/assets/site-53c6774cf7c72334c19b711aa00e7bafcd9f74e0ad3cbcd85811b2e30064dd8c.css" media="screen" />
+  </head>
+  <body class="dark:bg-slate-900 dark:text-slate-100">
+    
+  <div class="max-w-xl md:mx-auto flex flex-col gap-y-10 my-10 md:gap-y-20 md:my-20 p-4">
+    <header>
+      <h1 class="text-4xl font-bold">Hello World</h1>
+    </header>
+    <main class="">
+      
+  <div class="prose dark:prose-invert">
+    <p>Having a blog was on the roadmap for a while but it became urgent :</p>
+
+<blockquote class="reddit-embed-bq" data-embed-height="604"><a href="https://www.reddit.com/r/btc/comments/1lfykko/comment/mytvp0g/">Comment</a><br> by<a href="https://www.reddit.com/user/MakkawChan/">u/MakkawChan</a> from discussion<a href="https://www.reddit.com/r/btc/comments/1lfykko/what_should_i_prioritize_in_my_business/"></a><br> in<a href="https://www.reddit.com/r/btc/">btc</a></blockquote>
+
+
+<script async="" src="https://embed.reddit.com/widgets.js" charset="UTF-8"></script>
+
+
+<p>This was one of the most constructive feedback we ever received. We know since we started that there was a hongbao bitcoin address scam back in 2018.</p>
+
+<p><img src="blog/hello-world/bitcoin-paper-wallet.png" alt="bitcoin-paper-wallet-scam" />
+<a href="[https://en.bitcoin.it/wiki/BitcoinPaperWallet">Bitcoin Paper Wallet Scam</a></p>
+
+<p>So We took the time to decide how/where to write.
+After setting Ghost (which is very nice) + Cloudflare worker to have /blog, I felt like it was not that great and I would spend time to setup email provider etc.</p>
+
+<p>Until I asked Alexis from <a href="https://www.rorvswild.com/blog">Rorvswild</a> how did they build their blog in their rails app : <a href="sitepress.cc">Sitepress</a>.</p>
+
+<p>I finally took a few days to setup it up :</p>
+
+<ul>
+<li>as a standlone for our SEO writer to be able to use without having to install our main app</li>
+<li>as a git submodule so it doesnt lock our deploys and pollute our commits history</li>
+<li>as an embed so /blog directly points to the content (SEO ++)</li>
+</ul>
+
+
+<p>The big plus is that we love markdown</p>
+
+<p>Now time to write about our journey and make our place on the bitcoin gifting scene.</p>
+
+  </div>
+
+    </main>
+    <footer class="flex flex-row gap-x-6">
+      <a href="/2/">Home</a>
+      <a href="/2/blog">Blog</a>
+      <a href="/2/about">About</a>
+      <a href="/2/contact">Contact</a>
+    </footer>
+  </div>
+
+  </body>
+</html>
