@@ -29,6 +29,7 @@ jobs:
 
       - name: Install and Build 🔨
         run: |
+          rm -rf ./build
           yarn install
           yarn build
           bundle exec sitepress compile
