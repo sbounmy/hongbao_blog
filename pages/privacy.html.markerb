@@ -1,0 +1,97 @@
+---
+layout: site
+title: Privacy Policy
+date: 2025-06-27
+---
+
+# Privacy Policy
+
+**Last Updated: 2025-06-27**
+
+We are deeply committed to the privacy and security of our users. We believe in transparency and want you to understand what information we collect, how we use it, and with whom we share it.
+
+We believe in being transparent about security. No service is completely immune to risk, which is why our core security principle is to minimize the data we collect. The safest data is the data we never store in the first place.
+
+Our goal is to empower you to make informed decisions about your data.
+
+## What Information We Collect
+
+To provide our services, we need to collect certain information. We strive to collect only what is necessary.
+
+
+| Action                   | Account (Email) | Shipping Address | Uploaded Image(s) | Payment Info   | Private Keys |
+| ------------------------ | :-------------: | :--------------: | :---------------: | :------------: | :----------: |
+| [Purchase Envelope](/#plan_options)        | <div class='not-prose inline-block'>![hongbao-logo](logo-32x32.png)</div> | <img src="https://static.cdnlogo.com/logos/s/83/stripe.svg" alt="Stored by Stripe" width="42" class='not-prose inline-block'> | <div class='not-prose inline-block'>![hongbao-logo](logo-32x32.png)</div> | <img src="https://static.cdnlogo.com/logos/s/83/stripe.svg" alt="Stored by Stripe" width="42" class='not-prose inline-block'> | - |
+| Generate Paper Wallet    | <div class='not-prose inline-block'>![hongbao-logo](logo-32x32.png)</div> | - | <div class='not-prose flex gap-2'>![hongbao-logo](logo-32x32.png)<%= image_tag 'chatgpt.svg', style: 'width:32px' %></div> | <img src="https://www.mtpelerin.com/images/logo-dark.svg" alt="Stored by Mt Pelerin" width="42" class='not-prose inline-block'> | - |
+| Use Existing Paper Wallet| - | - | - | - | - |
+| Scan QR Code             | - | - | - | - | - |
+
+**Legend:**
+
+-   <div class='not-prose inline-block'>![hongbao-logo](logo-32x32.png)</div> **Our Servers:** Stored on Hetzner 🇩🇪.
+-   <img class='not-prose' src="https://static.cdnlogo.com/logos/s/83/stripe.svg" alt="Stored by Stripe" width="20" style="display: inline-block; vertical-align: middle;"> **Stripe:** Payment processor.
+-   <img class='not-prose' src="https://www.mtpelerin.com/images/logo-dark.svg" alt="Stored by Mt Pelerin" width="20" style="display: inline-block; vertical-align: middle;"> **Mt Pelerin:** Fiat-to-Bitcoin integration Partner.
+-   **Account:** When you create an account, we store your email address. Your password is encrypted, and we never store it in plaintext.
+-   **Shipping address** The address you entered to receive a physical product
+-   **Uploaded image** : The pictures you upload to generate your custom paper wallet
+-   **Payment info** : Credit Card / Any banking related information
+-   **Private Keys:** : Bitcoin private keys to access to your funds.
+
+## How We Use Your Information
+
+-   **To Provide Services:** To create your paper wallets, process your orders, and ship physical products to you.
+-   **To Communicate:** To send you updates about your orders and provide customer support.
+-   **To Improve Our Service:** We analyze anonymized usage data to understand how our service is used and how we can make it better. We use Plausible and Microsoft Clarity for this purpose (see below).
+
+## Third-Party Services
+
+We partner with specialized third-party services to provide certain features. We only share the information necessary for them to perform their function.
+
+### Stripe (Payments and Shipping)
+
+When you purchase a physical product, we use Stripe to handle payment processing and shipping information.
+
+-   **What they collect:** You provide your payment details (credit card) and shipping address directly to Stripe through their secure checkout page.
+-   **What we see:** We do not see your full credit card information. We receive a confirmation token, the last 4 digits of your card, and the shipping address necessary to fulfill your order. Your sensitive payment and shipping data is stored securely by Stripe.
+-   We encourage you to review [Stripe's Privacy Policy](https://stripe.com/privacy) for full details.
+
+### Mt Pelerin (Fiat-to-Bitcoin Conversion)
+
+For users who wish to top up their wallets with traditional currency (like EUR or CHF), we use the Mt Pelerin widget.
+
+-   **What we share:** When you initiate a top-up, we provide your generated Bitcoin address to the Mt Pelerin widget so they know where to send the funds.
+-   **What they collect:** You provide your payment information (like credit card details) directly to Mt Pelerin through their secure, embedded widget. We **never** see, handle, or store this sensitive information.
+-   We encourage you to review [Mt Pelerin's Privacy Policy](https://www.mtpelerin.com/privacy-policy) for full details on how they handle your data.
+
+### OpenAI (AI Image Generation)
+
+We use OpenAI's `gpt-image-1` model to create the unique artwork for your paper wallets based on your ideas.
+
+-   **What we share:** To generate your design, we send the following information to OpenAI's API:
+    -   The text prompts you write.
+    -   The theme and any images you upload for the design.
+    -   A unique, anonymous identifier for your user account. This helps OpenAI monitor for and prevent misuse of their service and is not linked to your email or name.
+-   **What they do:** OpenAI uses this information to generate your image and returns it to us. The generated images are then stored on our servers as part of your paper wallet.
+-   We encourage you to review [OpenAI's Privacy Policy](https://openai.com/policies/privacy-policy).
+
+### Plausible (Analytics)
+
+We use Plausible for website analytics. Plausible is a privacy-focused analytics tool that does not use cookies and does not collect any personal data. It helps us understand our website traffic, such as which pages are popular and where our visitors come from, so we can improve our service. All data is aggregated and anonymized. You can see the same data we see on our public dashboard: [https://plausible.io/hongbaob.tc](https://plausible.io/hongbaob.tc).
+
+### Microsoft Clarity (Interaction Analytics)
+
+We use Microsoft Clarity to understand how users interact with our website. Clarity provides us with anonymized heatmaps and session recordings, which show us where users click, scroll, and move their mouse. This helps us identify areas of confusion and improve the usability of our website. Clarity does not collect any personal information that could identify you. We encourage you to review [Microsoft's Privacy Statement](https://privacy.microsoft.com/en-us/privacystatement) for more details.
+
+## Data Security and Retention
+
+We implement a range of security measures to protect your data, including encryption and secure credential management. However, no online service can be 100% secure.
+
+We retain your information for as long as your account is active or as needed to provide you with our services. We also retain data as necessary to comply with legal obligations, resolve disputes, and enforce our agreements. You can request the deletion of your account and associated data at any time.
+
+## Your Rights
+
+You have the right to access, update, or delete the personal information we hold about you. You can manage your account information through your user dashboard or by contacting us directly.
+
+## Contact Us
+
+If you have any questions or concerns about this Privacy Policy or our data practices, please don't hesitate to contact us at [team@hongbaob.tc].
