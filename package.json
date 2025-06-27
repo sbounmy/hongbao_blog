@@ -2,8 +2,8 @@
   "name": "hongbao-blog",
   "private": true,
   "scripts": {
-    "build": "npx tailwindcss -i ./assets/stylesheets/site.css -o ./assets/builds/site.css --minify",
-    "watch": "npx tailwindcss -i ./assets/stylesheets/site.css -o ./assets/builds/site.css --watch"
+    "build": "tailwindcss -i ./assets/stylesheets/site.css -o ./assets/builds/site.css --minify",
+    "watch": "tailwindcss -i ./assets/stylesheets/site.css -o ./assets/builds/site.css --watch"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
