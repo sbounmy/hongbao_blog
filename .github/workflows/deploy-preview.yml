@@ -33,7 +33,7 @@ jobs:
       - name: Rewrite Asset Paths for Subfolder Preview ✍️
         run: |
           PR_NUMBER=${{ github.event.number }}
-          BUILD_DIR="./app/content/build"
+          BUILD_DIR="./build"
           echo "Rewriting asset paths in $BUILD_DIR for preview under /$PR_NUMBER"
           find $BUILD_DIR -type f -name '*.html' -print0 | xargs -0 sed -i -e "s|href=\"/|href=\"/$PR_NUMBER/|g" -e "s|src=\"/|src=\"/$PR_NUMBER/|g"
           find $BUILD_DIR -type f -name '*.css' -print0 | xargs -0 sed -i "s|url('/|url('/$PR_NUMBER/|g"
@@ -44,7 +44,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: ./app/content/build
+          publish_dir: ./build
           destination_dir: ${{ github.event.number }} # Changed to just :id
           keep_files: true
 
