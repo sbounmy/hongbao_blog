@@ -1,19 +1,14 @@
 <%= render_layout "body" do %>
   <div class="max-w-xl md:mx-auto flex flex-col gap-y-10 my-10 md:gap-y-20 md:my-20 p-4">
-    <header>
+    <div>
       <h1 class="text-4xl font-bold"><%= current_page.data.fetch("title") %></h1>
       <% if subtitle = current_page.data["subtitle"] %>
         <h2 class="text-xl opacity-50 mt-2"><%= subtitle %></h2>
       <% end %>
-    </header>
+    </div>
     <main class="">
       <%= yield %>
     </main>
-    <footer class="flex flex-row gap-x-6">
-      <%= link_to "Home", "/" %>
-      <%= link_to "Blog", "/blog" %>
-      <%= link_to "About", "/about" %>
-      <%= link_to "Contact", "/contact" %>
-    </footer>
   </div>
+  <%= render "shared/footer" %>
 <% end %>
