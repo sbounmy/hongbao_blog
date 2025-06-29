@@ -6,6 +6,8 @@
     <%= stylesheet_link_tag "tailwind" %>
   </head>
   <body class="dark:bg-slate-900 dark:text-slate-100">
+    <%= render_if_exists "shared/header" %>
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
 </html>

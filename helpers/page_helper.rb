@@ -36,4 +36,10 @@ module PageHelper
   def date(date_string)
     Date.parse(date_string) if date_string.present?
   end
+
+  def render_if_exists(path, *args)
+    render path, *args
+  rescue ActionView::MissingTemplate
+    nil
+  end
 end
