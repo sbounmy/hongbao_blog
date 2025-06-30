@@ -1,0 +1,36 @@
+en:
+  faq:
+    title: "Get answers to your questions."
+    subtitle_html: "In anticipation of your questions, we have answered the most common ones. For more information, please visit reach us out :"
+    community_title: "Join the community"
+    team_title: "Meet the team"
+    questions:
+      - q: "Why Paper wallet in 2025 ?"
+        a: "It's the perfect medium to gift Bitcoin because they are cheap to produce at home and easy to use. They are not recommended for long term storage as they can be lost, stolen or damaged. For the long term storage, we recommend to use a hardware wallet."
+      - q: "How should I use your paper wallet?"
+        a: "You can decide to use an existing Paper Wallet or Generate your own with an image upload.
+        <ol>
+        <li>1. Generate the keys or import your own</li>
+        <li>2. Print the paper wallet</li>
+        <li>3. Top them up the amount you want via a credit card, wire transfer or directly from your wallet.</li>
+        <li>4. Slip the paper wallet into the envelope.</li>
+        <li>5. Gift it to your recipient.</li>
+        </ol>"
+      - q: "How should my recipient use the paper wallet?"
+        a: "If they already have an hardware wallet, they can use hongbao to transfer the Bitcoin to their wallet. If they don't have an hardware wallet, they can use hongbao or any software wallet (Bitcoin Core, Electrum, etc.) to receive the Bitcoin.</br>If they are newcoiners, they can keep it in a drawer until they have setup an hardware wallet."
+      - q: "Can I buy the credits separately from the envelopes?"
+        a: "At the moment, the credits are only available for free with the envelopes because we believe that the paper wallets alone doesn't give the best gift experience."
+      - q: "What happens my recipient loses the paper wallet ?"
+        a: "We can't do anything, even HongBao as we don't have your keys. Think of it as a gift to the community: lost coins make everyone else‘s worth slightly more."
+      - q: "Can someone access my funds by scanning the QR code (private key) ?"
+        a: "Yes, the backface contains the private key e.g password. So anyone can read or save it will have access to coins. This is why we put it into a red envelope :)"
+      - q: "Can I use the passphrase to access my funds?"
+        a: "At the moment, we don't support it because it means that you have to tell your recipient the passphrase (which is not a good idea). If you think this is important contact us."
+      - q: "Can I use my own Paper Wallet ?"
+        a: "Yes. Our paper wallet generator is to make it easy. If you're a maxi and like your design, you can use ours offline and import your keys."
+      - q: "How does it work in terms of No KYC? Does Mt Pellerin allow to do that?"
+        a: "Yes, Mt Pellerin allows to do <a class='text-blue-400 hover:underline' href='https://developers.mtpelerin.com/service-information/identity-verification' target='_blank'>that</a> but we are dependent on their policy. It has no KYC if you pay by wire transfer, otherwise they have a KYC to prevent card fraud."
+      - q: "What are the max amounts you can do?"
+        a: "According to <a class='text-blue-400 hover:underline' href='https://developers.mtpelerin.com/service-information/pricing-and-limits#by-bank-transfer' target='_blank'>Mt Pelerin</a>, the max amount is 100k€ or 1k€ for instant transfer"
+      - q: "What is the recommended amount to send?"
+        a: "In average, people gift 20€. For Family and close friends, it's ~50€."

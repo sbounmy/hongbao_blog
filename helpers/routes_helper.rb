@@ -14,4 +14,8 @@ module RoutesHelper
   def etsy_url
     "https://etsy.com/shop/HongBaoBitcoin"
   end
+
+  def reddit_url
+    "https://www.reddit.com/r/HongBaoBitcoin/"
+  end
 end
