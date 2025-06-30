@@ -3,12 +3,12 @@ s3_bucket_name = "<replace-with-your-bucket-name>"
 
 desc "Remove all files from the build directory"
 task :clean do
-  sh 'rm -rf ./build'
+  sh "rm -rf ./build"
 end
 
 desc "Compile the sitepress site"
 task :compile do
-  sh 'bundle exec sitepress compile'
+  sh "bundle exec sitepress compile"
 end
 
 namespace :publish do
