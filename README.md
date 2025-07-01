@@ -2,12 +2,19 @@
 
 Welcome to your new Sitepress site! If you know Rails, you'll feel right at home in Sitepress because it's built on top of Rails. There's a few things you'll need to know to get around:
 
+## Installation
+
+```sh
+  bundle install
+  yarn install
+```
+
 ## Starting the preview server
 
 First thing you'll want to do is start the preview server:
 
 ```sh
-$ sitepress server
+$ bin/dev
 ```
 
 Then open http://127.0.0.1:8080 and you'll see the welcome page.
