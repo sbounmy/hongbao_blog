@@ -1,7 +1,11 @@
+---
+title: About
+layout: site
+---
   <div class="w-full flex flex-col gap-8 items-center justify-center min-h-screen">
-  <%= render "shared/header" %>
+
   <div class="prose lg:prose-xl pb-8">
-    <p class='lead'>
+    <p class='lead bg-pink-300'>
       Hong₿ao began with a personal story: a father wanting to gift Bitcoin to his son, as meaningfully as a traditional red envelope. Today, we're a team of 2, making Bitcoin gifting simple, beautiful, and self-custodial.
     </p>
     <h2>About</h2>
@@ -88,7 +92,7 @@
 </div>
 
   <div class="text-center space-y-4 pb-6 mx-auto">
-    <%= section_header(title: 'About', subtitle: 'The team behind the code') %>
+    <h2>About</h3>
     <p class="max-w-[750px] mx-auto text-lg text-muted-foreground sm:text-xl">
         When we are not crafting code, we are embracing our favorite role: being Bitcoin teachers. Together, we turn every gift into ₿!
     </p>
@@ -135,4 +139,4 @@
     </div>
   </div>
 
-  <%= render(ContributorsComponent.new) %>
+  <%# render(ContributorsComponent.new) %>
