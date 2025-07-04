@@ -12,7 +12,7 @@ Having a blog was on the roadmap for a while but it became urgent :
 
 This was one of the most constructive feedback we ever received. We know since we started that there was a hongbao bitcoin address scam back in 2018.
 
-![bitcoin-paper-wallet-scam](blog/hello-world/bitcoin-paper-wallet.png)
+![bitcoin-paper-wallet-scam](/assets/blog/hello-world/bitcoin-paper-wallet.png)
 [Bitcoin Paper Wallet Scam]([https://en.bitcoin.it/wiki/BitcoinPaperWallet)
 
 So We took the time to decide how/where to write.
