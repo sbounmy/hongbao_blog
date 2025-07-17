@@ -34,3 +34,5 @@ en:
         a: "According to <a class='text-blue-400 hover:underline' href='https://developers.mtpelerin.com/service-information/pricing-and-limits#by-bank-transfer' target='_blank'>Mt Pelerin</a>, the max amount is 100k€ or 1k€ for instant transfer"
       - q: "What is the recommended amount to send?"
         a: "In average, people gift 20€. For Family and close friends, it's ~50€."
+      - q: "Can I send the envelope by post mail ?"
+        a: "Yes, you can send the envelope by mail but it's not recommended as it's not secure and can be lost or stolen. Red envelopes are well known in asia, so at least you should put the paper walletin a regular envelope."
