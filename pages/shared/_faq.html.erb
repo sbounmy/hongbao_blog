@@ -1,50 +1,27 @@
-<div class="bg-white text-black font-sans py-20">
-  <div class="container mx-auto px-5 grid lg:grid-cols-2 gap-16">
+<div class="flex flex-col gap-10 my-8 max-w-3xl mx-auto">
+  <h2 class="text-5xl font-bold leading-tight"><%= t('faq.title') %></h2>
 
-    <div class="flex flex-col">
-      <h2 class="text-5xl font-bold leading-tight mb-5"><%= t('faq.title') %></h2>
-      <p class="text-lg text-gray-500 leading-relaxed mb-10">
-        <%= t('faq.subtitle_html').html_safe %>
-      </p>
-      <div class="flex flex-col gap-5">
-        <a href="<%= reddit_url %>" target="_blank" class="bg-gray-900 border border-gray-800 rounded-lg p-5 flex items-center text-white transition-colors hover:bg-gray-800">
-          <svg class="w-10 h-10 mr-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.283 3.033H3.717a1.711 1.711 0 0 0-1.704 1.723v11.122c0 .95.768 1.722 1.711 1.722h12.953l3.615 3.348.005-.002a.857.857 0 0 0 1.417-.636V4.756a1.711 1.711 0 0 0-1.715-1.723zM8.19 12.152a1.442 1.442 0 0 1-1.435-1.45 1.442 1.442 0 0 1 1.435-1.45 1.442 1.442 0 0 1 1.435 1.45 1.442 1.442 0 0 1-1.435 1.45zm7.62 0a1.442 1.442 0 0 1-1.435-1.45 1.442 1.442 0 0 1 1.435-1.45 1.442 1.442 0 0 1 1.435 1.45c0 .799-.646 1.45-1.435 1.45z"/></svg>
-          <span class="flex flex-col text-left">
-            <span class="text-sm font-medium text-gray-400"><%= t('faq.community_title') %></span>
-            <span class="text-lg font-bold">Reddit</span>
-          </span>
-        </a>
-        <a href="<%= github_url %>" target="_blank" class="bg-gray-900 border border-gray-800 rounded-lg p-5 flex items-center text-white transition-colors hover:bg-gray-800">
-          <%= github_icon class: "w-10 h-10 mr-4" %>
-          <span class="flex flex-col text-left">
-            <span class="text-sm font-medium text-gray-400"><%= t('faq.team_title') %></span>
-            <span class="text-lg font-bold">Github</span>
-          </span>
-        </a>
-      </div>
-      <div class="mt-12">
-        <figure>
-          <blockquote class="text-xl italic text-gray-700">
-            <p>"What if you could gift Bitcoin like cash—no address, no app? You can, with paper wallet"</p>
-          </blockquote>
-          <figcaption class="mt-4 flex items-center justify-end">
-            <%= image_tag image_url('sbounmy.jpg'), class: "h-12 w-12 rounded-full mr-4" %>
-            <span class="font-semibold text-gray-900"><%= link_to "Stephane", "https://x.com/sbounmy", class: "text-blue-400 hover:underline", target: "_blank" %>,<br/>Maker of HongBao</span>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-
-    <div class="border-t border-gray-200 lg:border-t-0">
-      <% t('faq.questions').each do |qa| %>
-        <details class="collapse collapse-arrow border-b border-gray-200 rounded-none">
-          <summary class="collapse-title text-lg font-medium py-5"><%= qa[:q] %></summary>
-          <div class="collapse-content text-gray-600 leading-relaxed">
-            <%= qa[:a].html_safe %>
-          </div>
-        </details>
-      <% end %>
-    </div>
-
+  <div class="flex flex-col gap-4">
+    <% t('faq.questions').each do |qa| %>
+      <details class="collapse collapse-arrow">
+        <summary class="focus:bg-black focus:text-white collapse-title text-lg font-medium py-5 border rounded-xl"><%= qa[:q] %></summary>
+        <div class="collapse-content text-gray-600 leading-relaxed p-4">
+          <%= qa[:a].html_safe %>
+        </div>
+      </details>
+    <% end %>
   </div>
+  <p class="text-lg text-gray-500 leading-relaxed">
+    <%= t('faq.subtitle_html').html_safe %> <%= link_to "Email", "mailto:team@hongbaob.tc", class: "text-blue-400 hover:underline", target: "_blank" %> or <%= link_to "Github", github_url, class: "text-blue-400 hover:underline", target: "_blank" %>
+  </p>
+  <figure>
+    <blockquote class="text-xl italic text-gray-700">
+      <p>"Lost coins make everyone else‘s worth slightly more. Think of it as a donation to everyone."</p>
+    </blockquote>
+    <figcaption class="mt-4 flex items-center justify-end">
+      <%= image_tag image_url('satoshi.jpg'), class: "h-12 w-12 rounded-full mr-4" %>
+      <span class="font-semibold text-gray-900"><%= link_to "Satoshi Nakamoto", "https://www.reddit.com/r/CryptoCurrency/comments/14o67w9/satoshi_nakamoto_himself_said_in_2010_that_lost/#:~:text=Even%20Satoshi%20Nakamoto%20himself%20had,as%20a%20donation%20to%20everyone%E2%80%9D.", class: "text-blue-400 hover:underline", target: "_blank" %>,<br/>Creator of Bitcoin</span>
+    </figcaption>
+  </figure>
+
 </div>
