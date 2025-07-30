@@ -1,0 +1,107 @@
+---
+title: Learn Bitcoin - Hong₿ao
+description: Learn about Bitcoin with your gift. No signup required, beginner-friendly guides and resources.
+layout: site
+---
+
+<div class="min-h-screen flex items-center justify-center px-4 py-12">
+  <div class="max-w-4xl w-full">
+    <!-- Welcome Section -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mb-6">
+        <span class="text-5xl">🎁</span>
+      </div>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">You've Got Bitcoin!</h1>
+
+      <p class="text-xl text-gray-700 mb-6">
+        Someone gifted you Bitcoin in a red envelope.<br>
+        Let's help you understand and claim your gift.
+      </p>
+    </div>
+
+    <!-- Path Selection -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-semibold text-center mb-6">Choose how you'd like to proceed</h2>
+
+      <div class="grid gap-4 md:gap-6">
+        <!-- I Know Bitcoin Path -->
+        <%= link_to hong_baos_path, class: "block", data: { turbo: false } do %>
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-base-300 hover:border-orange-500 cursor-pointer">
+            <div class="card-body">
+              <div class="flex items-start gap-4">
+                <span class="text-4xl">⚡</span>
+                <div class="flex-1">
+                  <h3 class="card-title text-lg mb-2">I already have Bitcoin</h3>
+                  <p class="text-sm opacity-70 mb-3">Check balance and transfer to your wallet</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-medium">2 min</span>
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <!-- I'm New to This Path (Recommended) -->
+        <%= link_to "/learn/guided", class: "block", data: { turbo: false } do %>
+          <div class="card bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
+            <div class="card-body">
+              <div class="flex items-start gap-4">
+                <span class="text-4xl">🎓</span>
+                <div class="flex-1">
+                  <h3 class="card-title text-lg mb-2 text-white">
+                    I'm a Newcoiner (beginner)
+                    <span class="badge badge-warning ml-2">RECOMMENDED</span>
+                  </h3>
+                  <p class="text-sm opacity-90 mb-3">Guided tour with video and step-by-step help</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-medium">5 min</span>
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-white" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <!-- Just Curious Path -->
+        <%= link_to "/learn/resources", class: "block", data: { turbo: false } do %>
+          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-base-300 hover:border-blue-500 cursor-pointer">
+            <div class="card-body">
+              <div class="flex items-start gap-4">
+                <span class="text-4xl">🤔</span>
+                <div class="flex-1">
+                  <h3 class="card-title text-lg mb-2">Just Curious</h3>
+                  <p class="text-sm opacity-70 mb-3">Learn about Bitcoin without claiming yet</p>
+                  <div class="flex items-center justify-between">
+                    <span class="text-sm font-medium">Browse freely</span>
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5" %>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+
+    <!-- Trust Indicators -->
+    <div class="text-center space-y-2 text-sm text-gray-500">
+      <p>🔒 No email or signup required</p>
+    </div>
+
+    <!-- Quick Actions for Desktop -->
+    <div class="hidden lg:flex justify-center gap-4 mt-8">
+      <button class="btn btn-outline btn-sm" onclick="window.print()">
+        <%= heroicon "printer", variant: :outline, class: "w-4 h-4" %>
+        Print this page
+      </button>
+      <button class="btn btn-outline btn-sm" onclick="navigator.share ? navigator.share({title: 'Bitcoin Gift', url: window.location.href}) : null">
+        <%= heroicon "share", variant: :outline, class: "w-4 h-4" %>
+        Share
+      </button>
+    </div>
+  </div>
+</div>
