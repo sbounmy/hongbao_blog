@@ -5,38 +5,54 @@ layout: site
 ---
 
 <div class="min-h-screen flex items-center justify-center px-4 py-12">
-  <div class="max-w-4xl w-full">
+  <div class="max-w-4xl w-full"
+       data-controller="confetti"
+       data-confetti-animation-value="school-pride"
+       data-confetti-duration-value="5"
+       data-confetti-particle-count-value="200"
+       data-confetti-first-color-value="#DC2626"
+       data-confetti-second-color-value="#F59E0B"
+       data-confetti-follow-value="false">
     <!-- Welcome Section -->
     <div class="text-center mb-12">
-      <div class="inline-flex items-center justify-center w-24 h-24 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mb-6">
-        <span class="text-5xl">🎁</span>
+      <div id="confetti-trigger" class="inline-flex items-center justify-center w-28 h-28 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mb-6 shadow-2xl"
+      data-action="click->confetti#spray">
+        <span class="text-6xl">🎁</span>
       </div>
 
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">You've Got Bitcoin!</h1>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">You've Got Bitcoin!</h1>
 
-      <p class="text-xl text-gray-700 mb-6">
-        Someone gifted you Bitcoin in a red envelope.<br>
+      <p class="text-xl text-gray-700 mb-2">
+        Someone gifted you Bitcoin in a red envelope.
+      </p>
+      <p class="text-lg text-gray-600">
         Let's help you understand and claim your gift.
       </p>
     </div>
 
     <!-- Path Selection -->
     <div class="mb-8">
-      <h2 class="text-2xl font-semibold text-center mb-6">Choose how you'd like to proceed</h2>
+      <h2 class="text-2xl font-semibold text-center mb-8 text-gray-800">Choose how you'd like to proceed</h2>
 
-      <div class="grid gap-4 md:gap-6">
-        <!-- I Know Bitcoin Path -->
-        <%= link_to hong_baos_path, class: "block", data: { turbo: false } do %>
-          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-base-300 hover:border-orange-500 cursor-pointer">
-            <div class="card-body">
-              <div class="flex items-start gap-4">
-                <span class="text-4xl">⚡</span>
+      <div class="space-y-4">
+        <!-- I Already Have Bitcoin Path -->
+        <%= link_to hong_baos_path, class: "card-link block", data: { turbo: false } do %>
+          <div class="option-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer group">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span class="text-3xl">⚡</span>
+                </div>
                 <div class="flex-1">
-                  <h3 class="card-title text-lg mb-2">I already have Bitcoin</h3>
-                  <p class="text-sm opacity-70 mb-3">Check balance and transfer to your wallet</p>
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm font-medium">2 min</span>
-                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5" %>
+                  <h3 class="text-xl font-bold mb-1 text-gray-900 group-hover:text-orange-600 transition-colors">
+                    I already have Bitcoin
+                  </h3>
+                  <p class="text-gray-600 text-sm">Check balance and transfer to your wallet</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-medium text-gray-500">2 min</span>
+                  <div class="transform group-hover:translate-x-1 transition-transform">
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-gray-400" %>
                   </div>
                 </div>
               </div>
@@ -44,21 +60,29 @@ layout: site
           </div>
         <% end %>
 
-        <!-- I'm New to This Path (Recommended) -->
-        <%= link_to "/learn/guided", class: "block", data: { turbo: false } do %>
-          <div class="card bg-gradient-to-r from-orange-500 to-red-500 text-white shadow-xl hover:shadow-2xl transition-all duration-300 cursor-pointer">
-            <div class="card-body">
-              <div class="flex items-start gap-4">
-                <span class="text-4xl">🎓</span>
+        <!-- I'm a Newcoiner Path (Recommended) -->
+        <%= link_to "/learn/guided", class: "card-link block", data: { turbo: false } do %>
+          <div class="option-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer group relative">
+            <!-- Recommended Badge - positioned absolutely at top right -->
+            <span class="absolute top-3 right-3 bg-yellow-400 text-red-900 text-xs font-bold px-3 py-1 rounded-full uppercase z-10">
+              Recommended
+            </span>
+
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span class="text-3xl">🎓</span>
+                </div>
                 <div class="flex-1">
-                  <h3 class="card-title text-lg mb-2 text-white">
+                  <h3 class="text-xl font-bold mb-1 text-gray-900 group-hover:text-green-600 transition-colors">
                     I'm a Newcoiner (beginner)
-                    <span class="badge badge-warning ml-2">RECOMMENDED</span>
                   </h3>
-                  <p class="text-sm opacity-90 mb-3">Guided tour with video and step-by-step help</p>
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm font-medium">5 min</span>
-                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-white" %>
+                  <p class="text-gray-600 text-sm">Guided tour with video and step-by-step help</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-medium text-gray-500">5 min</span>
+                  <div class="transform group-hover:translate-x-1 transition-transform">
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-gray-400" %>
                   </div>
                 </div>
               </div>
@@ -67,17 +91,23 @@ layout: site
         <% end %>
 
         <!-- Just Curious Path -->
-        <%= link_to "/learn/resources", class: "block", data: { turbo: false } do %>
-          <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-all duration-300 border-2 border-base-300 hover:border-blue-500 cursor-pointer">
-            <div class="card-body">
-              <div class="flex items-start gap-4">
-                <span class="text-4xl">🤔</span>
+        <%= link_to "/learn/resources", class: "card-link block", data: { turbo: false } do %>
+          <div class="option-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer group">
+            <div class="p-6">
+              <div class="flex items-center gap-4">
+                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                  <span class="text-3xl">🤔</span>
+                </div>
                 <div class="flex-1">
-                  <h3 class="card-title text-lg mb-2">Just Curious</h3>
-                  <p class="text-sm opacity-70 mb-3">Learn about Bitcoin without claiming yet</p>
-                  <div class="flex items-center justify-between">
-                    <span class="text-sm font-medium">Browse freely</span>
-                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5" %>
+                  <h3 class="text-xl font-bold mb-1 text-gray-900 group-hover:text-blue-600 transition-colors">
+                    Just Curious
+                  </h3>
+                  <p class="text-gray-600 text-sm">Learn about Bitcoin without claiming yet</p>
+                </div>
+                <div class="flex items-center gap-3">
+                  <span class="text-sm font-medium text-gray-500">Browse freely</span>
+                  <div class="transform group-hover:translate-x-1 transition-transform">
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-gray-400" %>
                   </div>
                 </div>
               </div>
@@ -87,21 +117,81 @@ layout: site
       </div>
     </div>
 
-    <!-- Trust Indicators -->
-    <div class="text-center space-y-2 text-sm text-gray-500">
-      <p>🔒 No email or signup required</p>
-    </div>
-
-    <!-- Quick Actions for Desktop -->
-    <div class="hidden lg:flex justify-center gap-4 mt-8">
-      <button class="btn btn-outline btn-sm" onclick="window.print()">
-        <%= heroicon "printer", variant: :outline, class: "w-4 h-4" %>
-        Print this page
-      </button>
-      <button class="btn btn-outline btn-sm" onclick="navigator.share ? navigator.share({title: 'Bitcoin Gift', url: window.location.href}) : null">
-        <%= heroicon "share", variant: :outline, class: "w-4 h-4" %>
-        Share
-      </button>
+    <!-- Trust Indicator -->
+    <div class="text-center mt-12">
+      <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-sm">
+        <span>🔒</span>
+        <span>No email or signup required</span>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Mobile-optimized chat bubble -->
+<div class="lg:hidden fixed bottom-4 right-4 z-50">
+  <button class="w-14 h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full shadow-lg flex items-center justify-center text-white" onclick="bitcoin_chat_modal.showModal()">
+    <%= heroicon "chat-bubble-left-right", variant: :solid, class: "w-6 h-6" %>
+  </button>
+</div>
+
+<!-- Chat Modal -->
+<dialog id="bitcoin_chat_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <h3 class="font-bold text-lg mb-4">Bitcoin Assistant</h3>
+
+    <div class="chat chat-start mb-4">
+      <div class="chat-bubble">
+        👋 Hi! I see you've received a Bitcoin gift. What would you like to know?
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 gap-2 mb-4">
+      <button class="btn btn-sm btn-outline" onclick="askQuestion('How much is it worth?')">
+        How much is it worth?
+      </button>
+      <button class="btn btn-sm btn-outline" onclick="askQuestion('Is this real money?')">
+        Is this real money?
+      </button>
+      <button class="btn btn-sm btn-outline" onclick="askQuestion('How do I use it?')">
+        How do I use it?
+      </button>
+      <button class="btn btn-sm btn-outline" onclick="askQuestion('Is it safe?')">
+        Is it safe?
+      </button>
+    </div>
+
+    <div class="modal-action">
+      <form method="dialog">
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+  <form method="dialog" class="modal-backdrop">
+    <button>close</button>
+  </form>
+</dialog>
+
+<script>
+  function askQuestion(question) {
+    // Placeholder for chat functionality
+    alert(`Answer for: "${question}" would appear here`);
+  }
+
+  // Trigger confetti on page load with localStorage check
+  window.addEventListener('DOMContentLoaded', () => {
+    const CONFETTI_KEY = 'hongbao_confetti_shown';
+    const ONE_MONTH = 30 * 24 * 60 * 60 * 1000; // 30 days in milliseconds
+
+    const lastShown = localStorage.getItem(CONFETTI_KEY);
+    const now = Date.now();
+
+    // Check if we should show confetti
+    if (!lastShown || (now - parseInt(lastShown)) > ONE_MONTH) {
+      setTimeout(() => {
+        document.getElementById('confetti-trigger').click();
+        // Store the current timestamp
+        localStorage.setItem(CONFETTI_KEY, now.toString());
+      }, 100);
+    }
+  });
+</script>
