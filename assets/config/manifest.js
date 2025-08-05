@@ -2,3 +2,4 @@
 //= link_directory ../stylesheets .css
 //= link_directory ../javascripts .js
 //= link tailwind.css
+ //= link sitepress.js

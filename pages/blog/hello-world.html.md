@@ -4,6 +4,7 @@ title: Hello World
 description: Why should we write ?
 date: 2025-06-25
 author: Stephane Bounmy
+image: logo.png
 ---
 
 Having a blog was on the roadmap for a while but it became urgent :
