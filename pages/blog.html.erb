@@ -8,19 +8,19 @@ primary_page:
   order: 1
 ---
 
-<div class="min-h-screen bg-gray-50">
+<div class="min-h-screen bg-base-200">
   <!-- Hero Section -->
-  <div class="bg-white shadow-sm">
+  <div class="bg-base-100 shadow-sm">
     <div class="container mx-auto px-4 py-12 sm:py-20">
       <div class="text-center">
         <div class="mb-6">
-          <a href="/" class="inline-flex items-center text-3xl font-semibold text-black no-underline hover:opacity-75 transition-opacity">
+          <a href="/" class="inline-flex items-center text-3xl font-semibold text-base-content no-underline hover:opacity-75 transition-opacity">
             <%= image_tag image_url("logo-32x32.png"), class: "h-10 w-10 mr-2" %>
             <span>Hong₿ao</span>
           </a>
         </div>
-        <h1 class="text-4xl sm:text-6xl font-bold text-gray-900 mb-4">Blog</h1>
-        <p class="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+        <h1 class="text-4xl sm:text-6xl font-bold text-base-content mb-4">Blog</h1>
+        <p class="text-lg sm:text-xl text-base-content/70 max-w-2xl mx-auto">
           Discover insights about Bitcoin gifting, paper wallets, and the latest updates from Hong₿ao
         </p>
       </div>
@@ -32,14 +32,14 @@ primary_page:
     <div class="max-w-6xl mx-auto">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <% ordered_pages("blog/*.html.md").each_with_index do |post, index| %>
-          <article class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
+          <article class="bg-base-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
             <!-- Featured Image Placeholder -->
             <% if post.data.image %>
-              <div class="aspect-w-16 aspect-h-9 bg-gray-200">
+              <div class="aspect-w-16 aspect-h-9 bg-base-300">
                 <%= image_tag post.data.image, class: "w-full h-48 object-cover", alt: post.data.title %>
               </div>
             <% else %>
-              <div class="h-48 bg-gradient-to-br from-orange-400 to-red-500 relative overflow-hidden">
+              <div class="h-48 bg-gradient-to-br from-primary to-secondary relative overflow-hidden">
                 <div class="absolute inset-0 flex items-center justify-center">
                   <%= image_tag image_url("logo-white.svg"), class: "h-20 w-20 opacity-20" %>
                 </div>
@@ -49,7 +49,7 @@ primary_page:
             
             <div class="p-6">
               <!-- Post Meta -->
-              <div class="flex items-center text-sm text-gray-500 mb-3">
+              <div class="flex items-center text-sm text-base-content/60 mb-3">
                 <% if post.data.date %>
                   <time datetime="<%= post.data.date.iso8601 %>">
                     <%= post.data.date.strftime('%B %d, %Y') %>
@@ -62,19 +62,19 @@ primary_page:
               </div>
               
               <!-- Title -->
-              <h2 class="text-xl font-bold mb-3 group-hover:text-orange-600 transition-colors">
-                <%= link_to post.data.title, post.url, class: "text-gray-900 hover:text-orange-600" %>
+              <h2 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
+                <%= link_to post.data.title, post.url, class: "text-base-content hover:text-primary" %>
               </h2>
               
               <!-- Description -->
               <% if post.data.description %>
-                <p class="text-gray-600 mb-4 line-clamp-3">
+                <p class="text-base-content/70 mb-4 line-clamp-3">
                   <%= post.data.description %>
                 </p>
               <% end %>
               
               <!-- Read More Link -->
-              <%= link_to post.url, class: "inline-flex items-center text-orange-600 hover:text-orange-700 font-medium" do %>
+              <%= link_to post.url, class: "inline-flex items-center text-primary hover:text-primary/80 font-medium" do %>
                 Read more
                 <svg class="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
@@ -91,28 +91,28 @@ primary_page:
           <div class="mb-4">
             <%= image_tag image_url("logo-32x32.png"), class: "h-16 w-16 mx-auto opacity-30" %>
           </div>
-          <h3 class="text-xl font-semibold text-gray-700 mb-2">No posts yet</h3>
-          <p class="text-gray-500">Check back soon for updates!</p>
+          <h3 class="text-xl font-semibold text-base-content mb-2">No posts yet</h3>
+          <p class="text-base-content/60">Check back soon for updates!</p>
         </div>
       <% end %>
     </div>
   </div>
   
   <!-- Newsletter CTA Section -->
-  <div class="bg-gradient-to-r from-orange-500 to-red-500 py-16 mt-16">
+  <div class="bg-gradient-to-r from-primary to-secondary py-16 mt-16">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold text-white mb-4">Stay Updated</h2>
-      <p class="text-white/90 mb-8 max-w-2xl mx-auto">
+      <h2 class="text-3xl font-bold text-primary-content mb-4">Stay Updated</h2>
+      <p class="text-primary-content/90 mb-8 max-w-2xl mx-auto">
         Get the latest news about Bitcoin gifting and Hong₿ao updates delivered to your inbox.
       </p>
       <div class="max-w-md mx-auto">
         <form class="flex flex-col sm:flex-row gap-3">
-          <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-white/50" required>
-          <button type="submit" class="px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+          <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-lg bg-base-100 text-base-content focus:outline-none focus:ring-2 focus:ring-primary-content/50" required>
+          <button type="submit" class="px-6 py-3 bg-base-100 text-primary font-semibold rounded-lg hover:bg-base-200 transition-colors">
             Subscribe
           </button>
         </form>
-        <p class="text-white/70 text-sm mt-3">We respect your privacy. Unsubscribe at any time.</p>
+        <p class="text-primary-content/70 text-sm mt-3">We respect your privacy. Unsubscribe at any time.</p>
       </div>
     </div>
   </div>
