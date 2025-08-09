@@ -121,8 +121,3 @@ Whether you’re onboarding a newcomer, surprising a seasoned HODLer, or adding 
 
 
 ---
-
-### ✅ Related posts:
-- [Best Bitcoin wallets for beginners](#)
-- [How to gift Bitcoin safely](#)
-- [Bitcoin and Chinese New Year traditions](#)

@@ -4,10 +4,11 @@
     <meta charset='utf-8'>
     <title><%= current_page.data.fetch("title") %></title>
     <%= stylesheet_link_tag "tailwind" %>
+    <%= javascript_include_tag "sitepress", "data-turbo-track": "reload", type: "module" %>
   </head>
   <body class="dark:bg-slate-900 dark:text-slate-100">
     <%= render_if_exists "shared/header" %>
     <%= yield %>
-    <%= render "shared/footer" %>
+    <%= render_if_exists "shared/footer" %>
   </body>
 </html>
