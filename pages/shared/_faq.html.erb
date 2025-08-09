@@ -4,23 +4,23 @@
   <div class="flex flex-col gap-4">
     <% t('faq.questions').each do |qa| %>
       <details class="collapse collapse-arrow">
-        <summary class="focus:bg-black focus:text-white collapse-title text-lg font-medium py-5 border rounded-xl"><%= qa[:q] %></summary>
-        <div class="collapse-content text-gray-600 leading-relaxed p-4">
+        <summary class="focus:bg-base-content focus:text-base-100 collapse-title text-lg font-medium py-5 border border-base-300 rounded-xl"><%= qa[:q] %></summary>
+        <div class="collapse-content text-base-content/70 leading-relaxed p-4">
           <%= qa[:a].html_safe %>
         </div>
       </details>
     <% end %>
   </div>
-  <p class="text-lg text-gray-500 leading-relaxed">
-    <%= t('faq.subtitle_html').html_safe %> <%= link_to "Email", "mailto:team@hongbaob.tc", class: "text-blue-400 hover:underline", target: "_blank" %> or <%= link_to "Github", github_url, class: "text-blue-400 hover:underline", target: "_blank" %>
+  <p class="text-lg text-base-content/60 leading-relaxed">
+    <%= t('faq.subtitle_html').html_safe %> <%= link_to "Email", "mailto:team@hongbaob.tc", class: "text-info hover:underline", target: "_blank" %> or <%= link_to "Github", github_url, class: "text-info hover:underline", target: "_blank" %>
   </p>
   <figure>
-    <blockquote class="text-xl italic text-gray-700">
+    <blockquote class="text-xl italic text-base-content/70">
       <p>"Lost coins make everyone else‘s worth slightly more. Think of it as a donation to everyone."</p>
     </blockquote>
     <figcaption class="mt-4 flex items-center justify-end">
       <%= image_tag image_url('satoshi.jpg'), class: "h-12 w-12 rounded-full mr-4" %>
-      <span class="font-semibold text-gray-900"><%= link_to "Satoshi Nakamoto", "https://www.reddit.com/r/CryptoCurrency/comments/14o67w9/satoshi_nakamoto_himself_said_in_2010_that_lost/#:~:text=Even%20Satoshi%20Nakamoto%20himself%20had,as%20a%20donation%20to%20everyone%E2%80%9D.", class: "text-blue-400 hover:underline", target: "_blank" %>,<br/>Creator of Bitcoin</span>
+      <span class="font-semibold text-base-content"><%= link_to "Satoshi Nakamoto", "https://www.reddit.com/r/CryptoCurrency/comments/14o67w9/satoshi_nakamoto_himself_said_in_2010_that_lost/#:~:text=Even%20Satoshi%20Nakamoto%20himself%20had,as%20a%20donation%20to%20everyone%E2%80%9D.", class: "text-info hover:underline", target: "_blank" %>,<br/>Creator of Bitcoin</span>
     </figcaption>
   </figure>
 

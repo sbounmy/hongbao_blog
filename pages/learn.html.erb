@@ -20,39 +20,39 @@ layout: site
         <span class="text-6xl">🎁</span>
       </div>
 
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900">You've Got Bitcoin!</h1>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-base-content">You've Got Bitcoin!</h1>
 
-      <p class="text-xl text-gray-700 mb-2">
+      <p class="text-xl text-base-content/80 mb-2">
         Someone gifted you Bitcoin in a red envelope.
       </p>
-      <p class="text-lg text-gray-600">
+      <p class="text-lg text-base-content/70">
         Let's help you understand and claim your gift.
       </p>
     </div>
 
     <!-- Path Selection -->
     <div class="mb-8">
-      <h2 class="text-2xl font-semibold text-center mb-8 text-gray-800">Choose how you'd like to proceed</h2>
+      <h2 class="text-2xl font-semibold text-center mb-8 text-base-content">Choose how you'd like to proceed</h2>
 
       <div class="space-y-4">
         <!-- I Already Have Bitcoin Path -->
         <%= link_to hong_baos_path, class: "card-link block", data: { turbo: false } do %>
-          <div class="option-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer group">
+          <div class="option-card bg-base-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300 cursor-pointer group">
             <div class="p-6">
               <div class="flex items-center gap-4">
-                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="w-16 h-16 bg-warning/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <span class="text-3xl">⚡</span>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-xl font-bold mb-1 text-gray-900 group-hover:text-orange-600 transition-colors">
+                  <h3 class="text-xl font-bold mb-1 text-base-content group-hover:text-primary transition-colors">
                     I already have Bitcoin
                   </h3>
-                  <p class="text-gray-600 text-sm">Check balance and transfer to your wallet</p>
+                  <p class="text-base-content/70 text-sm">Check balance and transfer to your wallet</p>
                 </div>
                 <div class="flex items-center gap-3">
-                  <span class="text-sm font-medium text-gray-500">2 min</span>
+                  <span class="text-sm font-medium text-base-content/60">2 min</span>
                   <div class="transform group-hover:translate-x-1 transition-transform">
-                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-gray-400" %>
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-base-content/50" %>
                   </div>
                 </div>
               </div>
@@ -62,27 +62,27 @@ layout: site
 
         <!-- I'm a Newcoiner Path (Recommended) -->
         <%= link_to getting_started_path, class: "card-link block", data: { turbo: false } do %>
-          <div class="option-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer group relative">
+          <div class="option-card bg-base-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300 cursor-pointer group relative">
             <!-- Recommended Badge - positioned absolutely at top right -->
-            <span class="absolute top-3 right-3 bg-yellow-400 text-red-900 text-xs font-bold px-3 py-1 rounded-full uppercase z-10">
+            <span class="absolute top-3 right-3 bg-warning text-warning-content text-xs font-bold px-3 py-1 rounded-full uppercase z-10">
               Recommended
             </span>
 
             <div class="p-6">
               <div class="flex items-center gap-4">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="w-16 h-16 bg-success/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <span class="text-3xl">🎓</span>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-xl font-bold mb-1 text-gray-900 group-hover:text-green-600 transition-colors">
+                  <h3 class="text-xl font-bold mb-1 text-base-content group-hover:text-success transition-colors">
                     I'm a Newcoiner (beginner)
                   </h3>
-                  <p class="text-gray-600 text-sm">Guided tour with video and step-by-step help</p>
+                  <p class="text-base-content/70 text-sm">Guided tour with video and step-by-step help</p>
                 </div>
                 <div class="flex items-center gap-3">
-                  <span class="text-sm font-medium text-gray-500">5 min</span>
+                  <span class="text-sm font-medium text-base-content/60">5 min</span>
                   <div class="transform group-hover:translate-x-1 transition-transform">
-                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-gray-400" %>
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-base-content/50" %>
                   </div>
                 </div>
               </div>
@@ -92,22 +92,22 @@ layout: site
 
         <!-- Just Curious Path -->
         <%= link_to "/learn/resources", class: "card-link block", data: { turbo: false } do %>
-          <div class="option-card bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 cursor-pointer group">
+          <div class="option-card bg-base-100 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-base-300 cursor-pointer group">
             <div class="p-6">
               <div class="flex items-center gap-4">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <div class="w-16 h-16 bg-info/20 rounded-full flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
                   <span class="text-3xl">🤔</span>
                 </div>
                 <div class="flex-1">
-                  <h3 class="text-xl font-bold mb-1 text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <h3 class="text-xl font-bold mb-1 text-base-content group-hover:text-info transition-colors">
                     Just Curious
                   </h3>
-                  <p class="text-gray-600 text-sm">Learn about Bitcoin without claiming yet</p>
+                  <p class="text-base-content/70 text-sm">Learn about Bitcoin without claiming yet</p>
                 </div>
                 <div class="flex items-center gap-3">
-                  <span class="text-sm font-medium text-gray-500">Browse freely</span>
+                  <span class="text-sm font-medium text-base-content/60">Browse freely</span>
                   <div class="transform group-hover:translate-x-1 transition-transform">
-                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-gray-400" %>
+                    <%= heroicon "arrow-right", variant: :outline, class: "w-5 h-5 text-base-content/50" %>
                   </div>
                 </div>
               </div>
@@ -119,7 +119,7 @@ layout: site
 
     <!-- Trust Indicator -->
     <div class="text-center mt-12">
-      <div class="inline-flex items-center gap-2 text-sm text-gray-600 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-sm">
+      <div class="inline-flex items-center gap-2 text-sm text-base-content/70 bg-base-100/80 backdrop-blur px-4 py-2 rounded-full shadow-sm">
         <span>🔒</span>
         <span>No email or signup required</span>
       </div>
@@ -129,7 +129,7 @@ layout: site
 
 <!-- Mobile-optimized chat bubble -->
 <div class="lg:hidden fixed bottom-4 right-4 z-50">
-  <button class="w-14 h-14 bg-gradient-to-r from-orange-500 to-red-500 rounded-full shadow-lg flex items-center justify-center text-white" onclick="bitcoin_chat_modal.showModal()">
+  <button class="w-14 h-14 bg-gradient-to-r from-primary to-secondary rounded-full shadow-lg flex items-center justify-center text-primary-content" onclick="bitcoin_chat_modal.showModal()">
     <%= heroicon "chat-bubble-left-right", variant: :solid, class: "w-6 h-6" %>
   </button>
 </div>
