@@ -1,0 +1,381 @@
+---
+title: Transparent Pricing - Hong₿ao
+description: Understanding the value behind our premium Bitcoin envelopes
+layout: post
+date: 2024-01-15
+author: Hong₿ao Team
+image: index/red_front.jpg
+---
+
+# Transparent Pricing
+
+We believe in complete transparency. Here's exactly what you're paying for when you choose Hong₿ao.
+
+## The Price Comparison
+
+<div class="overflow-x-auto my-8">
+  <table class="table table-zebra w-full">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="text-center">Hong₿ao Mini</th>
+        <th class="text-center">AliExpress</th>
+        <th class="text-center">Binance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td></td>
+        <td>
+          <%= image_tag "index/red_front.jpg", class: "w-32 mx-auto rounded-lg" %>
+        </td>
+        <td>
+          <%= image_tag "blog/transparent-pricing/aliexpress.webp", class: "w-32 mx-auto rounded-lg" %>
+        </td>
+        <td>
+          <%= image_tag "blog/transparent-pricing/binance.webp", class: "w-32 mx-auto rounded-lg" %>
+        </td>
+      </tr>
+      <tr>
+        <td class="font-semibold">Price</td>
+        <td class="text-center text-primary font-bold">€29 for 6 envelopes</td>
+        <td class="text-center">€2 for 6 envelopes</td>
+        <td class="text-center">From €10 + fees</td>
+      </tr>
+            <tr>
+        <td class="font-semibold">Price per gift</td>
+        <td class="text-center text-primary font-bold">€4.8 / envelope</td>
+        <td class="text-center">€0.33 / envelope</td>
+        <td class="text-center">% fees / card</td>
+      </tr>
+
+      <tr>
+        <td class="font-semibold">Type</td>
+        <td class="text-center">Bitcoin red envelope + Paper Wallet</td>
+        <td class="text-center">Traditional red envelope</td>
+        <td class="text-center">Digital only</td>
+      </tr>
+      <tr>
+        <td class="font-semibold">Self-Custody</td>
+        <td class="text-center">✅ Public + private keys on paper wallet</td>
+        <td class="text-center">N/A</td>
+        <td class="text-center">❌ Binance holds</td>
+      </tr>
+      <tr>
+        <td class="font-semibold">KYC Required</td>
+        <td class="text-center">✅ No</td>
+        <td class="text-center">✅ No</td>
+        <td class="text-center">❌ Yes (account needed)</td>
+      </tr>
+      <tr>
+        <td class="font-semibold">Education</td>
+        <td class="text-center">✅ QR tutorials + Bitcoin Quote</td>
+        <td class="text-center">❌ None</td>
+        <td class="text-center">❌ Exchange-focused</td>
+      </tr>
+      <tr>
+        <td class="font-semibold">Custom Gift</td>
+        <td class="text-center">✅ Paper Wallet with AI art</td>
+        <td class="text-center">❌ Generic only</td>
+        <td class="text-center">⚠️ Limited themes</td>
+      </tr>
+      <tr>
+        <td class="font-semibold">Expiration</td>
+        <td class="text-center">✅ Never</td>
+        <td class="text-center">N/A</td>
+        <td class="text-center">❌ 180 days</td>
+      </tr>
+      <tr>
+        <td class="font-semibold">True Bitcoin Experience</td>
+        <td class="text-center">✅ Real wallet ownership</td>
+        <td class="text-center">❌ Cash only</td>
+        <td class="text-center">❌ IOU from exchange</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+At first glance, €29 for 6 envelopes might seem expensive compared to €2 generic red envelopes. But Hong₿ao offers true Bitcoin ownership and education, while Binance Gift Cards are just IOUs that require the recipient to trust an exchange.
+
+## Why are our envelopes pricey ?
+
+### 🪙 Made for Bitcoin only
+
+<div class="grid md:grid-cols-2 gap-6 items-start my-6">
+  <div>
+    <p>Our envelopes aren't just generic red packets with a Bitcoin logo. They are a Bitcoin lesson itself.<br/>
+    On the front the logo tells important features about bitcoin :
+    </p>
+    <ul>
+      <li>Decentralized</li>
+      <li>Cryptocurrency</li>
+      <li>Digital</li>
+      <li>Peer to Peer</li>
+    </ul>
+    <p>At the back : one bitcoin inspirational quote and a QRCode that redirects to a getting started tutorial made for beginners <%= link_to "here", getting_started_path %></p>
+  </div>
+  <iframe width="315" height="560"
+  src="https://www.youtube.com/embed/dM_clM4oxOw"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen></iframe>
+</div>
+
+### 📱 Self-Custody QR Code
+
+<div class="flex flex-col gap-2">
+  <div class="w-full mx-auto">
+    <!-- DaisyUI Tabs -->
+    <div role="tablist" class="tabs tabs-boxed justify-center mb-8 gap-2">
+      <input type="radio" name="wallet_tabs" role="tab" class="tab btn btn-lg rounded-full px-8 btn-outline" aria-label="Front" checked />
+      <div role="tabpanel" class="tab-content">
+        <%= render 'shared/diffs' %>
+      </div>
+
+      <input type="radio" name="wallet_tabs" role="tab" class="tab btn btn-lg rounded-full px-8 btn-outline" aria-label="Back" />
+      <div role="tabpanel" class="tab-content">
+        <%= render 'shared/back_diffs' %>
+      </div>
+    </div>
+  </div>
+  <div>
+    <p>Each envelope includes a QR code that guides recipients directly to self-custody education. No apps to download, no KYC requirements, no third parties - just pure Bitcoin knowledge. We believe every Bitcoin gift should come with the education to truly own it.</p>
+
+    <div class="bg-base-200 rounded-lg p-6 mt-4">
+      <h4 class="font-bold mb-2">What recipients learn:</h4>
+      <ul class="list-disc list-inside space-y-1">
+        <li>How to check their balance securely</li>
+        <li>Introduction to Bitcoin basics</li>
+        <li>Hardware wallet recommendations</li>
+        <li>Self-custody best practices</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+### ✨ Custom Paper Wallets
+
+<div class="flex flex-col">
+  <iframe
+    src="https://www.youtube.com/embed/Fm0YkubCZGc"
+    class="rounded-t-lg w-full aspect-video"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+
+  <div>
+    <p>Every pack includes free credits for AI-generated custom paper wallets. You can personalize each gift with the recipient's photo or chosen style. It's not just an envelope - it's a personalized piece of art that happens to contain Bitcoin.</p>
+
+  </div>
+</div>
+
+
+## Where Does Your Money Go?
+
+We believe you should know exactly how we use your money. Here's the breakdown:
+
+### Cost Distribution
+
+At Hong₿ao, here's where your €29 actually goes:
+
+<div class="bg-base-200 rounded-xl p-6 my-8">
+  <div class="grid md:grid-cols-2 gap-8 items-center">
+    <!-- Left column - Product image -->
+    <div class="flex items-center justify-center">
+    <%= image_tag "plans/mini/001_red/001_red_pack_6.jpg" %>
+    </div>
+
+    <!-- Right column - Cost breakdown -->
+    <div class="space-y-3 not-prose">
+      <!-- Material & Printing - €1.20 -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🖨️</span>
+          <div>
+            <p class="font-semibold">Material & Printing</p>
+            <p class="text-sm text-base-content/70">Premium paper and custom printing</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold">€1.20</span>
+      </div>
+
+      <!-- Storage & Handling - €1.50 -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">📦</span>
+          <div>
+            <p class="font-semibold">Storage & Handling by Lin Da</p>
+            <p class="text-sm text-base-content/70">Warehouse and fulfillment</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold">€1.50</span>
+      </div>
+
+      <!-- Shipping - €4.00 -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">✈️</span>
+          <div>
+            <p class="font-semibold">International Shipping</p>
+            <p class="text-sm text-base-content/70">Free worldwide delivery</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold">€4.00</span>
+      </div>
+
+      <!-- Marketing & Ads - €8.00 -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">📢</span>
+          <div>
+            <p class="font-semibold">Marketing & Ads</p>
+            <p class="text-sm text-base-content/70">Spreading Bitcoin adoption</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold text-primary">€8.00</span>
+      </div>
+
+      <!-- AI Tokens - €2.40 -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🤖</span>
+          <div>
+            <p class="font-semibold">AI Tokens</p>
+            <p class="text-sm text-base-content/70">Custom wallet generation credits</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold">€2.40</span>
+      </div>
+
+      <!-- Development - €7.00 -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">💻</span>
+          <div>
+            <p class="font-semibold">Features, Bugs & Education</p>
+            <p class="text-sm text-base-content/70">Continuous improvements & Bitcoin content</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold text-accent">€7.00</span>
+      </div>
+
+      <!-- Our Margin - €3.00 -->
+      <div class="flex items-center justify-between border-t border-base-300 pt-3">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">💰</span>
+          <div>
+            <p class="font-semibold">Our Margin</p>
+            <p class="text-sm text-base-content/70">To keep the lights on</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold text-success">€3.00</span>
+      </div>
+
+      <!-- Payment Processing -->
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">💳</span>
+          <div>
+            <p class="font-semibold">Stripe Processing</p>
+            <p class="text-sm text-base-content/70">~3.5% payment fees</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold">€1.02</span>
+      </div>
+
+      <!-- VAT -->
+      <div class="flex items-center justify-between border-b border-base-300 pb-3">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl">🏦</span>
+          <div>
+            <p class="font-semibold">VAT & Taxes</p>
+            <p class="text-sm text-base-content/70">Government's share</p>
+          </div>
+        </div>
+        <span class="text-xl font-bold">€0.88</span>
+      </div>
+
+      <!-- Total -->
+      <div class="pt-3">
+        <div class="flex items-center justify-between">
+          <span class="text-xl font-bold">Total per 6-pack</span>
+          <span class="text-2xl font-bold text-primary">€29.00</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+> 💡 **Note**: We're a team of 4 passionate Bitcoiners, proudly independent and not backed by VCs. Every purchase helps us stay autonomous and continue our mission of making Bitcoin gifting accessible and beautiful.
+
+## Technical Specifications
+
+<div class="bg-base-200 rounded-lg p-6 my-8">
+  <h3 class="text-xl font-bold mb-4">Hong₿ao Envelope Specs</h3>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div>
+      <h4 class="font-semibold text-primary mb-2">Dimensions</h4>
+      <ul class="space-y-1 text-sm">
+        <li>• Size: 120 × 180 mm</li>
+        <li>• Thickness: 0.18 mm</li>
+        <li>• Weight: ~3.5 g per envelope</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold text-primary mb-2">Paper Quality</h4>
+      <ul class="space-y-1 text-sm">
+        <li>• Weight: 120 g/m²</li>
+        <li>• Type: Premium red paper</li>
+        <li>• Finish: Matte with spot gloss</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold text-primary mb-2">Features</h4>
+      <ul class="space-y-1 text-sm">
+        <li>• Perfect fit for paper wallets</li>
+        <li>• Bitcoin orange accents</li>
+        <li>• QR code on back</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+## More Than Just an Envelope
+
+When you buy Hong₿ao envelopes, you're not just purchasing paper and ink. You're investing in:
+
+### 🎓 Bitcoin Education
+Each envelope is a gateway to financial sovereignty. We include resources that help recipients understand not just how to use Bitcoin, but why it matters.
+
+### 🎁 Meaningful Gifts
+Transform digital Bitcoin into tangible, giftable moments. There's something special about physically handing someone their first Bitcoin.
+
+### 🚀 Bitcoin Adoption
+Every envelope helps onboard someone new to sound money. You're not just giving a gift - you're expanding the Bitcoin network.
+
+## See It In Action
+
+<div class="my-8">
+  <div class="aspect-video bg-base-300 rounded-lg flex items-center justify-center">
+    <p class="text-base-content/60">Video: How to gift Bitcoin with Hong₿ao</p>
+  </div>
+</div>
+
+## Our Promise
+
+- **100% Satisfaction Guarantee** - If you're not happy, we'll make it right
+- **Free Worldwide Shipping** on orders over €50
+- **Open Source** - Our code is public and auditable
+- **No Third Parties** - Generate wallets offline, no trust required
+
+## The Bottom Line
+
+Yes, you could buy cheaper envelopes. You could even print your own paper wallets. But Hong₿ao offers something more: a complete Bitcoin gifting experience that's beautiful, secure, and educational.
+
+Every envelope we sell supports our mission to make Bitcoin more accessible. We're not trying to get rich - we're trying to help others discover financial sovereignty, one red envelope at a time.
+
+---
+
+*Ready to give the gift of Bitcoin? [Check out our envelope designs →](/pricing)*
