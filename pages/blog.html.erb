@@ -31,7 +31,7 @@ primary_page:
   <div class="container mx-auto px-4 py-12">
     <div class="max-w-6xl mx-auto">
       <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        <% ordered_pages("blog/*.html.md").each_with_index do |post, index| %>
+        <% ordered_pages("blog/*").each_with_index do |post, index| %>
           <article class="bg-base-100 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
             <!-- Featured Image Placeholder -->
             <% if post.data.image %>
@@ -46,7 +46,7 @@ primary_page:
                 <div class="absolute bottom-0 left-0 right-0 h-1/2 bg-gradient-to-t from-black/30 to-transparent"></div>
               </div>
             <% end %>
-            
+
             <div class="p-6">
               <!-- Post Meta -->
               <div class="flex items-center text-sm text-base-content/60 mb-3">
@@ -60,19 +60,19 @@ primary_page:
                   <span><%= post.data.author %></span>
                 <% end %>
               </div>
-              
+
               <!-- Title -->
               <h2 class="text-xl font-bold mb-3 group-hover:text-primary transition-colors">
                 <%= link_to post.data.title, post.url, class: "text-base-content hover:text-primary" %>
               </h2>
-              
+
               <!-- Description -->
               <% if post.data.description %>
                 <p class="text-base-content/70 mb-4 line-clamp-3">
                   <%= post.data.description %>
                 </p>
               <% end %>
-              
+
               <!-- Read More Link -->
               <%= link_to post.url, class: "inline-flex items-center text-primary hover:text-primary/80 font-medium" do %>
                 Read more
@@ -84,7 +84,7 @@ primary_page:
           </article>
         <% end %>
       </div>
-      
+
       <!-- Empty State -->
       <% if ordered_pages("blog/*.html.md").empty? %>
         <div class="text-center py-16">
@@ -97,7 +97,7 @@ primary_page:
       <% end %>
     </div>
   </div>
-  
+
   <!-- Newsletter CTA Section -->
   <div class="bg-gradient-to-r from-primary to-secondary py-16 mt-16">
     <div class="container mx-auto px-4 text-center">
