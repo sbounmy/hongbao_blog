@@ -1,7 +1,114 @@
 <div class="min-h-screen">
   <%= render "shared/header" %>
+
+  <!-- Banner about video removal -->
+  <div class="max-w-7xl mx-auto px-8 pt-8">
+    <div class="alert alert-warning shadow-lg">
+      <%= heroicon "exclamation-triangle", variant: :outline, class: "w-6 h-6" %>
+      <div>
+        <p class="font-semibold">This documentary did 4M+ views and was suddenly removed from YouTube</p>
+        <p class="text-sm">We believe this video is the best introduction to Bitcoin. The original was taken down for unknown reasons - maybe the government try to censor it?</p>
+      </div>
+    </div>
+  </div>
+
   <section class="max-w-7xl mx-auto flex flex-col items-center gap-8 p-8 justify-center">
     <h1 class="text-4xl font-bold">Satoshi Mystery</h1>
     <iframe src="<%= satoshi_video_url %>" width="100%" height="720" allow="autoplay"></iframe>
+  </section>
+
+  <!-- What is Hongbao Section -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Header -->
+      <div class="mb-12 flex w-full flex-col text-center md:mb-20">
+        <p class="mb-3 text-sm font-medium uppercase tracking-wider text-primary">WHILE YOU'RE HERE</p>
+        <h2 class="mx-auto text-3xl font-extrabold tracking-tight md:text-5xl">
+          Discover Hong₿ao
+        </h2>
+        <p class="mt-4 text-xl text-gray-600 max-w-3xl mx-auto">
+          Just like Satoshi gave the world Bitcoin, we're making it easy to gift Bitcoin to the next generation through beautiful, tangible red envelopes.
+        </p>
+      </div>
+
+      <!-- Feature Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <!-- Feature 1 -->
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <%= heroicon "gift", variant: :outline, class: "w-10 h-10 text-primary" %>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Gift Bitcoin Beautifully</h3>
+          <p class="text-gray-600">Transform digital Bitcoin into physical red envelopes - perfect for birthdays, holidays, and orange-pilling moments</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-secondary/10 to-secondary/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <%= heroicon "sparkles", variant: :outline, class: "w-10 h-10 text-secondary" %>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">AI-Powered Designs</h3>
+          <p class="text-gray-600">Create custom Bitcoin notes with unique AI-generated artwork that makes each gift special</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="text-center group">
+          <div class="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-accent/10 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+            <%= heroicon "shield-check", variant: :outline, class: "w-10 h-10 text-accent" %>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Secure & Simple</h3>
+          <p class="text-gray-600">Non-custodial wallets with easy-to-follow instructions - perfect for Bitcoin beginners</p>
+        </div>
+      </div>
+
+      <!-- CTA Section with Visual -->
+      <div class="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+        <!-- Left: Visual -->
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-r from-orange-400/20 to-red-400/20 rounded-3xl blur-3xl"></div>
+          <%= image_tag "bill_hongbao.jpg", class: "relative rounded-2xl shadow-2xl w-full" %>
+        </div>
+
+        <!-- Right: CTAs -->
+        <div class="space-y-6">
+          <div class="bg-gradient-to-br from-primary/5 to-primary/10 rounded-2xl p-6 border border-primary/20">
+            <h3 class="text-2xl font-bold mb-2">Try It Free</h3>
+            <p class="text-gray-600 mb-4">Create your first Bitcoin red envelope with our AI designer - no payment required</p>
+            <%= link_to dashboard_path, class: "btn btn-primary rounded-full btn-lg w-full" do %>
+              <%= heroicon "banknotes", variant: :solid, class: "inline-block h-4 w-4 align-middle mr-1" %>
+              <span>Start Creating</span>
+            <% end %>
+          </div>
+
+          <div class="bg-gradient-to-br from-secondary/5 to-secondary/10 rounded-2xl p-6 border border-secondary/20">
+            <h3 class="text-2xl font-bold mb-2">Bitcoin Wisdom Pack</h3>
+            <p class="text-gray-600 mb-4">6 legendary quotes in beautiful envelopes - perfect for gifting</p>
+            <%= link_to pricing_path, class: "btn btn-secondary rounded-full btn-lg w-full" do %>
+              <%= heroicon "envelope-open", variant: :solid, class: "inline-block h-4 w-4 align-middle mr-1" %>
+              <span>View Collection</span>
+            <% end %>
+          </div>
+        </div>
+      </div>
+
+      <!-- Social Proof -->
+      <div class="mt-20 text-center">
+        <p class="text-lg text-gray-600 mb-8">Join thousands making Bitcoin gifting meaningful</p>
+        <div class="flex flex-wrap justify-center items-center gap-12">
+          <div>
+            <span class="block text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">10,000+</span>
+            <p class="text-sm text-gray-600 mt-1">Bitcoin notes created</p>
+          </div>
+          <div>
+            <span class="block text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">50+</span>
+            <p class="text-sm text-gray-600 mt-1">Countries worldwide</p>
+          </div>
+          <div>
+            <span class="block text-4xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">₿1+</span>
+            <p class="text-sm text-gray-600 mt-1">Bitcoin gifted</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 </div>
