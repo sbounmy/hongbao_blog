@@ -5,16 +5,9 @@
     <title><%= current_page.data.fetch("title") %></title>
     <%= stylesheet_link_tag "tailwind" %>
     <%= javascript_include_tag "sitepress", "data-turbo-track": "reload", type: "module" %>
-    
-    <%# Initialize theme before page loads to prevent FOUC %>
-    <script>
-      (function() {
-        const savedTheme = localStorage.getItem('theme');
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        const theme = savedTheme || systemTheme;
-        document.documentElement.setAttribute('data-theme', theme);
-      })();
-    </script>
+
+    <%= render_if_exists "shared/plausible" %>
+
   </head>
   <body class="bg-base-100 text-base-content">
     <%= render_if_exists "shared/header" %>
