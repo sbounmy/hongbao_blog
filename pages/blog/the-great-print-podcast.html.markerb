@@ -72,7 +72,7 @@ Before going full Bitcoin maximalist with his art, Bartos had a practice project
 
 That's when the signature wavy style was born - not from some grand artistic vision, but from the practical need to fill space with a pen.
 
-<%= image_tag "https://placehold.co/864x576", class: "w-full rounded-lg shadow-lg my-6", alt: "Dollar bill meme art by The Great Print" %>
+<%= cdn_image_tag "blog/the-great-print/bitcoin-note.jpg", class: "w-full rounded-lg shadow-lg my-6", alt: "Dollar bill meme art by The Great Print" %>
 
 ## The Economics of Bitcoin Art (Let's Be Real)
 
