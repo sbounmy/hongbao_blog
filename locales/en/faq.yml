@@ -38,3 +38,5 @@ en:
         a: "In average, people gift 20€. For Family and close friends, it's ~50€."
       - q: "Can I send the envelope by post mail ?"
         a: "Yes, you can send the envelope by mail but it's not recommended as it's not secure and can be lost or stolen. Red envelopes are well known in asia, so at least you should put the paper walletin a regular envelope."
+      - q: "How are the keys generated ?"
+        a: "We generate a 256-bit mnemonic seed phrase using <a class='link' href='https://github.com/bitcoinjs/bip39' target='_blank'>bip39</a> from <a class='link' href='https://github.com/bitcoinjs/bitcoinjs-lib' target='_blank'>bitcoinjs-lib</a> (compiled with Browserify) and <a class='link' href='https://github.com/bitcoinerlab/secp256k1' target='_blank'>@bitcoinerlab/secp256k1</a> for elliptic curve cryptography to derive HD wallets and sign transactions. All cryptographic operations happen securely in your browser - we never see your private keys. If you want to be extra-safe, try to <code>Save page As</code> to be fully offline."
