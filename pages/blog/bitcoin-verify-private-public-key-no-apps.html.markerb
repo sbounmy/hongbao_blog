@@ -1,0 +1,304 @@
+---
+title: "How to Verify Bitcoin Private & Public Keys Without Apps (2024 Guide)"
+description: Learn how to safely verify your Bitcoin private keys match public addresses without downloading software. Essential security guide for Bitcoin self-custody.
+layout: post
+date: 2024-01-15
+author: Stephane Bounmy
+---
+
+# How to Verify Your Bitcoin Keys Are Correct (Without Installing Anything)
+
+*5-minute read " Essential for Bitcoin self-custody*
+
+<div class="alert alert-info shadow-lg my-6">
+  <%= heroicon "information-circle", variant: :outline, class: "w-6 h-6" %>
+  <div>
+    <p class="font-semibold">Why This Matters</p>
+    <p class="text-sm">When generating Bitcoin keys, verifying they match is crucial. A mismatched private key means permanently lost funds. This guide shows you how to verify keys safely without downloading any software.</p>
+  </div>
+</div>
+
+## The Key Generation Flow
+
+Before we dive into verification, understand how Bitcoin keys work:
+
+```
+Mnemonic Seed � Private Key � Public Key � Bitcoin Address
+```
+
+<div class="bg-base-200 rounded-lg p-6 my-6">
+  <p class="font-semibold mb-2">= Key Fact:</p>
+  <p>Your private key generates your public address. If you have the correct private key, you can always recover the public address. But the reverse is impossible - that's what makes Bitcoin secure.</p>
+</div>
+
+## Method 1: Ian Coleman's BIP39 Tool (Most Comprehensive)
+
+The gold standard for offline key verification.
+
+### Steps:
+
+1. **Download for Offline Use**
+   - Visit [https://iancoleman.io/bip39/](https://iancoleman.io/bip39/)
+   - Right-click � "Save Page As" � Save as HTML
+   - **Disconnect from internet completely**
+   - Open the saved HTML file in your browser
+
+2. **Enter Your Private Key**
+   - If you have a mnemonic seed (12/24 words), enter it in the "BIP39 Mnemonic" field
+   - If you have a raw private key, scroll to "Derived Addresses" section
+
+3. **Verify Your Address**
+   - Check if the generated address matches your public address
+   - Look for your address in the list (it might be at different derivation paths)
+
+<div class="alert alert-warning shadow-lg my-6">
+  <%= heroicon "exclamation-triangle", variant: :outline, class: "w-6 h-6" %>
+  <div>
+    <p class="font-semibold">� Security Warning</p>
+    <p class="text-sm">NEVER enter your private key on the online version. Always download and use offline. Clear your browser cache after use.</p>
+  </div>
+</div>
+
+### Pro Tips:
+- Use a live Linux USB for maximum security
+- Check multiple derivation paths (m/44'/0'/0', m/49'/0'/0', m/84'/0'/0')
+- Verify the first AND last few characters of addresses
+
+## Method 2: Hongbao Bitcoin Tool (Quick & Visual)
+
+Perfect for verifying paper wallets and Bitcoin notes.
+
+### Quick Address Lookup
+
+<div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-6 my-6 border border-primary/20">
+  <h4 class="font-semibold mb-4">🔍 Instant Bitcoin Address Verification</h4>
+  <p class="mb-4">Enter a Bitcoin address to check if it has an associated Bitcoin note or verify its format:</p>
+  
+  <%= form_with url: search_hong_baos_path, method: :get, local: false, data: { turbo: false }, class: "flex flex-col sm:flex-row gap-3" do |f| %>
+    <%= f.text_field :q, 
+        placeholder: "Enter Bitcoin address (e.g., 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa)", 
+        class: "input input-bordered input-primary flex-1",
+        pattern: "^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$|^bc1[a-z0-9]{39,59}$",
+        title: "Please enter a valid Bitcoin address",
+        required: true %>
+    <%= f.submit "Verify Address →", class: "btn btn-primary" %>
+  <% end %>
+  
+  <p class="text-sm text-base-content/70 mt-3">
+    This will search our database for any Bitcoin notes created with this address and verify the address format.
+  </p>
+</div>
+
+### Steps for Full Key Verification:
+
+1. **Access the Tool**
+   - Go to [https://hongbaob.tc/papers/new](https://hongbaob.tc/papers/new)
+   - Works offline after page loads
+   - No account required
+
+2. **Enter Your Private Key**
+   - Input your private key in WIF format
+   - The corresponding public address appears instantly
+   - QR codes generated for both keys
+
+3. **Visual Verification**
+   - Compare the generated address with your expected address
+   - Scan QR codes to double-check on another device
+   - Print for cold storage if needed
+
+<div class="bg-primary/10 rounded-lg p-6 my-6 border border-primary/20">
+  <p class="font-semibold mb-2">💡 Unique Advantage:</p>
+  <p>Hongbao shows you a visual Bitcoin note design, making it easier to spot if something looks wrong. Great for beginners who prefer visual confirmation.</p>
+</div>
+
+## Method 3: Browser Console (For Tech-Savvy Users)
+
+Use JavaScript libraries directly in your browser console.
+
+### Using BitcoinJS Library:
+
+```javascript
+// Load the library (offline version recommended)
+const bitcoin = require('bitcoinjs-lib');
+
+// Your private key in WIF format
+const privateKeyWIF = 'YOUR_PRIVATE_KEY_HERE';
+
+// Convert and get address
+const keyPair = bitcoin.ECPair.fromWIF(privateKeyWIF);
+const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
+
+console.log('Public Address:', address);
+```
+
+## Method 4: Manual Calculation (Educational)
+
+For the truly paranoid or curious, you can verify using pen and paper:
+
+1. **Convert private key to binary**
+2. **Apply ECDSA secp256k1 curve multiplication**
+3. **Hash with SHA-256, then RIPEMD-160**
+4. **Add network byte and checksum**
+5. **Encode in Base58**
+
+<details class="my-6">
+<summary class="cursor-pointer font-semibold text-primary hover:text-primary/80">
+  Click to see the manual calculation steps �
+</summary>
+<div class="mt-4 p-4 bg-base-200 rounded-lg">
+  <p>This is extremely complex and not recommended for actual use, but understanding the process helps you trust the tools above. Each step involves cryptographic operations that would take hours to do manually.</p>
+  <p class="mt-2">Resources for learning:</p>
+  <ul class="list-disc list-inside mt-2">
+    <li>Mastering Bitcoin by Andreas Antonopoulos</li>
+    <li>Bitcoin Wiki: Technical background of version 1 Bitcoin addresses</li>
+    <li>Learn Me a Bitcoin: Public Key to Address conversion</li>
+  </ul>
+</div>
+</details>
+
+## Red Flags: When NOT to Trust a Key
+
+Watch out for these warning signs:
+
+<div class="grid md:grid-cols-2 gap-4 my-6">
+  <div class="alert alert-error">
+    <span class="text-2xl">=�</span>
+    <div>
+      <p class="font-semibold">Suspicious Patterns</p>
+      <p class="text-sm">Keys with obvious patterns like "1111" or "AAAA"</p>
+    </div>
+  </div>
+
+  <div class="alert alert-error">
+    <span class="text-2xl">=�</span>
+    <div>
+      <p class="font-semibold">Too Short/Long</p>
+      <p class="text-sm">Private keys should be exactly 51-52 characters (WIF)</p>
+    </div>
+  </div>
+
+  <div class="alert alert-error">
+    <span class="text-2xl">=�</span>
+    <div>
+      <p class="font-semibold">Wrong Prefix</p>
+      <p class="text-sm">Bitcoin WIF keys start with 5, K, or L</p>
+    </div>
+  </div>
+
+  <div class="alert alert-error">
+    <span class="text-2xl">=�</span>
+    <div>
+      <p class="font-semibold">Can't Reproduce</p>
+      <p class="text-sm">Different tools give different addresses</p>
+    </div>
+  </div>
+</div>
+
+## Best Practices for Key Verification
+
+###  DO:
+- **Always work offline** when handling private keys
+- **Verify on multiple tools** for important amounts
+- **Test with small amounts first** before sending large sums
+- **Keep physical backups** of verified key pairs
+- **Use fresh browser profiles** or incognito mode
+- **Clear clipboard** after copying private keys
+
+### L DON'T:
+- Enter private keys on online websites
+- Trust closed-source verification tools
+- Screenshot or photo private keys
+- Email or message private keys
+- Use public computers for verification
+- Skip verification for large amounts
+
+## Testing Your Setup
+
+Before trusting any verification method with real funds:
+
+1. **Generate a test key pair**
+2. **Send a tiny amount** (few sats)
+3. **Verify you can access it**
+4. **Move it to another address**
+5. **Only then use for larger amounts**
+
+<div class="bg-secondary/10 rounded-lg p-6 my-6 border border-secondary/20">
+  <h3 class="font-semibold mb-2">>� Practice Wallet</h3>
+  <p>Here's a test private key to practice with (NO FUNDS - DO NOT USE):</p>
+  <code class="block mt-2 p-2 bg-base-300 rounded">5KYZdUEo39z3FPeuBxyCUngg4qhVHbxdB1NmkcrvUz5pP8bWEiS</code>
+  <p class="text-sm mt-2">Expected address: 1HZwkCg6Vet6tCrY7fS3MkgJMWJ9xSeXS9</p>
+</div>
+
+## Common Issues & Solutions
+
+<div class="space-y-4 my-6">
+  <details class="collapse collapse-arrow bg-base-200">
+    <summary class="collapse-title font-semibold">Address doesn't match?</summary>
+    <div class="collapse-content">
+      <ul class="list-disc list-inside space-y-1 mt-2">
+        <li>Check if you're using the right address type (Legacy/SegWit/Native SegWit)</li>
+        <li>Verify derivation path matches your wallet</li>
+        <li>Ensure no typos in private key entry</li>
+        <li>Try different tools to cross-verify</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="collapse collapse-arrow bg-base-200">
+    <summary class="collapse-title font-semibold">Which address format should I use?</summary>
+    <div class="collapse-content">
+      <ul class="list-disc list-inside space-y-1 mt-2">
+        <li><strong>Legacy (1...):</strong> Oldest, most compatible, highest fees</li>
+        <li><strong>SegWit (3...):</strong> Lower fees, good compatibility</li>
+        <li><strong>Native SegWit (bc1...):</strong> Lowest fees, newest standard</li>
+      </ul>
+    </div>
+  </details>
+
+  <details class="collapse collapse-arrow bg-base-200">
+    <summary class="collapse-title font-semibold">Is it safe to verify online?</summary>
+    <div class="collapse-content">
+      <p class="mt-2">NO. Always download tools and use offline. Online verification exposes your private keys to potential theft through malicious scripts, network sniffing, or compromised websites.</p>
+    </div>
+  </details>
+</div>
+
+## Emergency Recovery Checklist
+
+If you think your keys might be compromised:
+
+1. **Move funds immediately** to a new secure wallet
+2. **Generate completely new keys** (don't reuse any part)
+3. **Update all associated services** (exchanges, lightning nodes)
+4. **Document the incident** for tax/legal purposes
+5. **Review your security practices**
+
+## Conclusion
+
+Verifying your Bitcoin keys is like checking your parachute before jumping - essential and non-negotiable. The few minutes spent verifying can save you from permanent loss.
+
+<div class="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 my-8 text-center">
+  <h3 class="text-2xl font-bold mb-4">Ready to Create Verified Bitcoin Gifts?</h3>
+  <p class="mb-6">Generate secure, verified Bitcoin paper wallets with beautiful designs</p>
+  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+    <%= link_to "Create Bitcoin Note", dashboard_path, class: "btn btn-primary btn-lg" %>
+    <%= link_to "Learn More", getting_started_path, class: "btn btn-outline btn-lg" %>
+  </div>
+</div>
+
+---
+
+*Remember: Not your keys, not your coins. But also: Unverified keys, potentially no coins.*
+
+## Related Resources
+
+- [Bitcoin.org: Securing Your Wallet](https://bitcoin.org/en/secure-your-wallet)
+- [Andreas Antonopoulos: Key Management](https://www.youtube.com/watch?v=1AjuuY5TYHI)
+- [Hongbao: Bitcoin Paper Wallet Guide](/blog/bitcoin-paper-wallet-guide)
+- [BIP39 Word List](https://github.com/bitcoin/bips/blob/master/bip-0039/english.txt)
+
+<div class="mt-8 p-4 bg-base-200 rounded-lg">
+  <p class="text-sm text-center">
+    <strong>Found this helpful?</strong> Share it with someone learning Bitcoin self-custody.
+  </p>
+</div>
