@@ -11,7 +11,9 @@
   </head>
   <body class="bg-base-100 text-base-content">
     <%= render_if_exists "shared/header" %>
-    <%= yield %>
+    <div class='mt-20'>
+      <%= yield %>
+    </div>
     <%= render_if_exists "shared/footer" %>
   </body>
 </html>
