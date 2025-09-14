@@ -26,7 +26,7 @@ Your paper wallet's credibility starts with how it feels. Get it wrong = Monopol
 ## Best Papers for Paper Wallets
 
 ### 1. Southworth 100% Cotton 32lb - Best Overall
-**$0.15/sheet**
+**$0.10/sheet**
 
 ![Southworth paper wallet](https://cdn.hongbaob.tc/blog/best-printer-paper/southworth-r14cf-paper.jpg)
 
@@ -36,10 +36,10 @@ The gold standard. Feels like actual currency.
 - **Printer compatibility**: Both inkjet and laser
 - **Why it works**: Cotton fibers give that money-like texture
 
-[→ Buy on Amazon](https://www.amazon.com/dp/B00006IDP3?tag=hongbao-20) (500 sheets for $75)
+[→ Buy on Amazon](https://amzn.to/4pr2ozT) (250 sheets for $25)
 
 ### 2. Neenah Classic Linen 24lb - Best Value
-**$0.08/sheet**
+**$0.05/sheet**
 
 ![Neenah Paper linen paper wallet](https://cdn.hongbaob.tc/blog/best-printer-paper/neenah-paper-linen.jpg)
 
@@ -49,10 +49,10 @@ Professional feel without breaking the bank.
 - **Best results**: Laser printers (but works with inkjet)
 - **Why it works**: Linen texture hides minor print imperfections
 
-[→ Buy on Amazon](https://www.amazon.com/dp/B000ETQPVK?tag=hongbao-20) (500 sheets for $40)
+[→ Buy on Amazon](https://amzn.to/46IDdRP) (500 sheets for $25)
 
 ### 3. Crane's Lettra Pearl White 110lb - Ultra Premium
-**$0.58/sheet**
+**$0.82/sheet**
 
 ![Crane lettra cotton paper wallet](https://cdn.hongbaob.tc/blog/best-printer-paper/crane-lettra-cotton.jpg)
 
@@ -62,7 +62,7 @@ For when you're gifting serious sats.
 - **Printer note**: Manual feed required for laser
 - **Why it works**: Thickness screams quality
 
-[→ Buy on Amazon](https://www.amazon.com/dp/B0043X5OXC?tag=hongbao-20) (125 sheets for $31)
+[→ Buy on Amazon](https://amzn.to/48nOAzS) (125 sheets for $103)
 
 ### 4. HP Premium 32lb - Budget Pick
 **$0.04/sheet**
@@ -76,7 +76,7 @@ Good enough for testing and casual gifts.
 - **Best with**: Laser printers only
 - **Why it works**: Thick enough to feel substantial, cheap enough for experiments
 
-[→ Buy on Amazon](https://www.amazon.com/dp/B000099O2W?tag=hongbao-20) (500 sheets for $20)
+[→ Buy on Amazon](https://amzn.to/3VUWSaX) (500 sheets for $20)
 
 ## How Paper Performs with Different Printers
 
@@ -95,13 +95,13 @@ Good enough for testing and casual gifts.
 - Weight: 32lb (120gsm)
 - Colors: White, ivory, gray
 - Price: $0.15/sheet
-- [→ Buy on Amazon](https://www.amazon.com/dp/B00006IDP3?tag=hongbao-20)
+- [→ Buy on Amazon](https://amzn.to/4pr2ozT)
 
 **Crane's Lettra** - Ultra Premium
 - Weight: 110lb (300gsm) - thick!
 - Best with: Inkjet (laser struggles with thickness)
 - Price: $0.25/sheet
-- [→ Buy on Amazon](https://www.amazon.com/dp/B0043X5OXC?tag=hongbao-20)
+- [→ Buy on Amazon](https://amzn.to/48nOAzS)
 
 ### Linen Papers (Works with Both)
 
@@ -109,13 +109,13 @@ Good enough for testing and casual gifts.
 - Texture: Crosshatch pattern
 - Weight: 24lb (90gsm)
 - Price: $0.08/sheet
-- [→ Buy on Amazon](https://www.amazon.com/dp/B000ETQPVK?tag=hongbao-20)
+- [→ Buy on Amazon](https://amzn.to/46IDdRP)
 
 **Southworth Linen** - Premium Feel
 - Contains: 25% cotton
 - Weight: 32lb (120gsm)
 - Price: $0.12/sheet
-- [→ Buy on Amazon](https://www.amazon.com/dp/B00006IDOF?tag=hongbao-20)
+- [→ Buy on Amazon](https://amzn.to/4pr2ozT)
 
 ## Paper Weight Guide
 
@@ -181,4 +181,4 @@ Don't use regular copy paper. The difference between $0.01 copy paper and $0.08 
 
 ---
 
-*Ready to print? Get our [free Bitcoin wallet template →](https://hongbao.money/dashboard)*
+*Ready to print? Get our [free Bitcoin wallet template →](https://hongbaob.tc/dashboard)*
