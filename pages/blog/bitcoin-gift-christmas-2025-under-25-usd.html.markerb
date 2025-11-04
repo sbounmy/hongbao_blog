@@ -30,37 +30,43 @@ After 8 years of failed orange-pill attempts, I finally figured it out:
 
 Here's my 2025 list of Bitcoin gifts under $25 that actually spark curiosity instead of killing conversations. These work because they combine something tangible (a gift they can hold) with education that doesn't feel like homework.
 
-## Bitcoin Books They'll Actually Read
-
-Let's be honest - most Bitcoin books are dense. But these visual, story-based books? Your family might actually read them:
-
-### Visual Bitcoin Books for Beginners
+### Easy to read Bitcoin Books for Beginners
 
 #### **Bitcoin Castle** ($18)
 <%= cdn_image_tag("blog/bitcoin-gift-christmas-2025-under-25-usd/bitcoin-castle.jpg", alt: "Bitcoin Castle", class: "w-full max-w-md mx-auto rounded-lg shadow-lg mb-4") %>
 
 **What it is:** Visual guide with pixel art that explains Bitcoin through a castle metaphor
+
 **Why it works:** Complex concepts become simple analogies
+
 **Best for:** Visual learners who hate technical jargon
-**Reading time:** 45 minutes
+
 **→** [Get it on Amazon](https://www.amazon.com/Bitcoin-Castle-Visual-Beginners-Explains/dp/B0FTTGKGZW)
 
 #### **Alice in Cryptoland** ($15 - eBook only)
 <%= cdn_image_tag("blog/bitcoin-gift-christmas-2025-under-25-usd/alice-cryptoland.jpg", alt: "Alice in Cryptoland", class: "w-full max-w-md mx-auto rounded-lg shadow-lg mb-4") %>
 
 **What it is:** Alice in Wonderland meets Bitcoin education
+
 **Why it works:** Familiar story framework teaching new concepts
+
 **Best for:** Anyone who loved Alice in Wonderland
-**Note:** English version only, no physical book available
+
+**Note:** English version only, no physical book for english version
+
 **→** [Get it on Amazon](https://www.amazon.fr/-/en/Daniel-Villa-Monteiro-ebook/dp/B0DC3HQQ3L)
 
 #### **Bitcoin Money: A Tale of Bitville** ($10)
 <%= cdn_image_tag("blog/bitcoin-gift-christmas-2025-under-25-usd/bitcoin-money-bitsville.jpg", alt: "Bitcoin Money Bitsville", class: "w-full max-w-md mx-auto rounded-lg shadow-lg mb-4") %>
 
 **What it is:** Children's book that adults secretly love
+
 **Why it works:** Money evolution explained through a town's story
+
 **Best for:** People who think Bitcoin is "too complicated"
+
 **Reading time:** 30 minutes that actually stick
+
 **→** [Get it on Amazon](https://www.amazon.com/Bitcoin-Money-Tale-Bitville-Discovering/dp/0578490676)
 
 ### For the Serious Reader
@@ -69,10 +75,15 @@ Let's be honest - most Bitcoin books are dense. But these visual, story-based bo
 <%= cdn_image_tag("blog/bitcoin-gift-christmas-2025-under-25-usd/bitcoin-standard.jpg", alt: "The Bitcoin Standard", class: "w-full max-w-md mx-auto rounded-lg shadow-lg mb-4") %>
 
 **What it is:** The definitive book on Bitcoin's monetary theory
+
 **Why it works:** Deep economic analysis, historical context
+
 **Best for:** Entrepreneurs, finance professionals, serious readers
+
 **Warning:** Dense read - not for casual interest
+
 **Reading time:** Several dedicated sessions
+
 **→** [Get it on Amazon](https://www.amazon.com/Bitcoin-Standard-Decentralized-Alternative-Central/dp/1119473861)
 
 ---
