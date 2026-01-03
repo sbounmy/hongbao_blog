@@ -62,7 +62,7 @@ Fireproof, waterproof, and corrosion-resistant, the 40 mm coin can withstand ext
 The **Satoship** is a next-generation physical Bitcoin wallet that combines collectible design with secure crypto storage. Powered by a tamper-resistant **NFC chip card**, it supports advanced standards like BIP32 and BIP39. Some editions also feature a hologram for added tamper evidence. Beyond its sleek coin form, the Satoship functions as a **secure** hardware wallet, enabling you to store Bitcoin and other major crypto assets with full **self-custody**.
 
 
-![picture 3](https://pub-8da241e4ddad4c35bfabb644f83f023e.r2.dev/blog/20260114-5bb52c82dc2b66c97616383d9adc67f25f583c5e54fcdb2217d16b537bb0efbf.png)  
+![picture 3](https://cdn.hongbaob.tc/blog/20260114-5bb52c82dc2b66c97616383d9adc67f25f583c5e54fcdb2217d16b537bb0efbf.png)  
 
 ![Satoship](https://i.ibb.co/R4TSc4sk/satochip-card-face.jpg)
 
