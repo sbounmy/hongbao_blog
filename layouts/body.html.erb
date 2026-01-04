@@ -3,7 +3,7 @@
   <head>
     <meta charset='utf-8'>
     <title><%= current_page.data.fetch("title") %></title>
-    <%= stylesheet_link_tag "tailwind" %>
+    <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "sitepress", "data-turbo-track": "reload", type: "module" %>
 
     <%= render_if_exists "shared/plausible" %>

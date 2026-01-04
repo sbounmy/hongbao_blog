@@ -7,3 +7,9 @@ _site/
 vendor/
 node_modules/
 assets/builds
+
+# Agent architecture
+.tmp/
+credentials.json
+token.json
+.env
