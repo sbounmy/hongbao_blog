@@ -46,6 +46,9 @@
     </div>
   <% end %>
 
+  <%# Extract TOC headings server-side for SEO %>
+  <% toc_headings = extract_toc_headings(current_page) %>
+
   <!-- Post Content with Sidebar TOC -->
   <div class="max-w-7xl mx-auto px-4 pb-12">
     <div class="lg:grid lg:grid-cols-[1fr_250px] lg:gap-8">
@@ -59,50 +62,22 @@
         <% end %>
       </div>
 
-      <!-- Sticky Sidebar TOC (desktop only) -->
-      <aside class="hidden lg:block">
-        <nav class="sticky top-24" id="toc-sidebar">
-          <h3 class="text-sm font-semibold text-base-content/70 uppercase tracking-wider mb-4">Contents</h3>
-          <ul class="space-y-2 text-sm" id="toc-list">
-            <!-- Auto-populated by JavaScript -->
-          </ul>
-        </nav>
-      </aside>
+      <!-- Sticky Sidebar TOC (desktop only) - Server-side rendered for SEO -->
+      <% if toc_headings.any? %>
+        <aside class="hidden lg:block">
+          <nav class="sticky top-24" aria-label="Table of contents">
+            <h3 class="text-sm font-semibold text-base-content/70 uppercase tracking-wider mb-4">Contents</h3>
+            <ul class="space-y-2 text-sm">
+              <% toc_headings.each do |heading| %>
+                <li>
+                  <%= link_to heading[:title], "##{heading[:slug]}",
+                      class: "text-base-content/60 hover:text-primary transition-colors block py-1 border-l-2 border-transparent hover:border-primary pl-3 -ml-px" %>
+                </li>
+              <% end %>
+            </ul>
+          </nav>
+        </aside>
+      <% end %>
     </div>
   </div>
-
-  <script>
-    // Auto-generate TOC from H2 headings
-    document.addEventListener('DOMContentLoaded', function() {
-      const content = document.getElementById('post-content');
-      const tocList = document.getElementById('toc-list');
-      const headings = content.querySelectorAll('h2');
-
-      headings.forEach(function(heading) {
-        // Skip "En bref" heading - it's a summary, not a section
-        if (heading.textContent.toLowerCase().includes('en bref')) return;
-
-        // Create ID if not present
-        if (!heading.id) {
-          heading.id = heading.textContent
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, '-')
-            .replace(/(^-|-$)/g, '');
-        }
-
-        const li = document.createElement('li');
-        const a = document.createElement('a');
-        a.href = '#' + heading.id;
-        a.textContent = heading.textContent;
-        a.className = 'text-base-content/60 hover:text-primary transition-colors block py-1 border-l-2 border-transparent hover:border-primary pl-3 -ml-px';
-        li.appendChild(a);
-        tocList.appendChild(li);
-      });
-
-      // Hide TOC if no headings
-      if (tocList.children.length === 0) {
-        document.getElementById('toc-sidebar').style.display = 'none';
-      }
-    });
-  </script>
 <% end %>

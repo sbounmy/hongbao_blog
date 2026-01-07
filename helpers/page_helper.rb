@@ -42,4 +42,27 @@ module PageHelper
   rescue ActionView::MissingTemplate
     nil
   end
+
+  # Extract H2 headings from markdown content for TOC generation
+  # Skips "En bref" heading as it's a summary section
+  def extract_toc_headings(page)
+    return [] unless page.respond_to?(:body)
+
+    body = page.body.to_s
+    headings = []
+
+    # Match markdown H2 headings: ## Heading text
+    body.scan(/^##\s+(.+)$/) do |match|
+      title = match[0].strip
+      next if title.downcase.include?('en bref')
+
+      slug = title.downcase
+                  .gsub(/[^a-z0-9]+/, '-')
+                  .gsub(/^-|-$/, '')
+
+      headings << { title: title, slug: slug }
+    end
+
+    headings
+  end
 end
