@@ -60,6 +60,10 @@
           <hr class="my-8">
           <p class="text-sm text-base-content/60">This post was published <%= publish_at.to_s(:long_ordinal) %></p>
         <% end %>
+
+        <%# Blog CTA - uses variant from frontmatter or defaults to :default %>
+        <% cta_variant = current_page.data["cta_variant"]&.to_sym || :default %>
+        <%= render "shared/blog_cta", variant: cta_variant %>
       </div>
 
       <!-- Sticky Sidebar TOC (desktop only) - Server-side rendered for SEO -->

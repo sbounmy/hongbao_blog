@@ -16,3 +16,49 @@ html {
   margin-right: auto;
   border-radius: 0.75rem;
 }
+
+/* Blog blockquotes - styled with left border, large quote mark, and author attribution */
+.prose blockquote:not(.twitter-tweet) {
+  position: relative !important;
+  border-left: 4px solid #f97316 !important;
+  background: transparent !important;
+  padding: 2rem 2rem 2rem 5rem !important;
+  margin: 2rem 0 !important;
+  font-style: italic !important;
+  font-size: 1.25rem !important;
+  line-height: 1.8 !important;
+  text-align: right !important;
+  quotes: none !important;
+}
+
+.prose blockquote:not(.twitter-tweet)::before {
+  content: "\201C";
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  font-size: 4rem;
+  line-height: 1;
+  color: #9ca3af;
+  font-style: normal;
+  font-family: Georgia, serif;
+}
+
+/* Remove default quotation marks added by browser/typography plugin */
+.prose blockquote:not(.twitter-tweet) p::before,
+.prose blockquote:not(.twitter-tweet) p::after {
+  content: none !important;
+}
+
+.prose blockquote:not(.twitter-tweet) p {
+  margin: 0 !important;
+}
+
+.prose blockquote:not(.twitter-tweet) cite {
+  display: block !important;
+  margin-top: 1rem !important;
+  font-style: normal !important;
+  font-size: 1rem !important;
+  color: #f97316 !important;
+  font-weight: 500 !important;
+  text-align: right !important;
+}

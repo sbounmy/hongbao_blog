@@ -5,6 +5,7 @@ description: "Teach kids about Bitcoin with paper wallets. A hands-on guide for 
 date: 2026-01-15
 author: Stephane Bounmy
 image: https://pub-8da241e4ddad4c35bfabb644f83f023e.r2.dev/blog/bitcoin-for-kids/hero.png
+cta_variant: kids
 ---
 
 My 8-year-old cousin asked "What's Bitcoin?" I handed her a paper wallet worth $5. She gets it now.
@@ -33,6 +34,8 @@ What they don't learn:
 Bitcoin fixes this. But you can't just explain it. Kids learn by doing.
 
 > The best financial education isn't a lecture. It's ownership.
+>
+> <cite>Stephane Bounmy</cite>
 
 When a kid holds a paper wallet with their own Bitcoin on it, something clicks. It's theirs. Not the bank's. Not their parents'. *Theirs*.
 
@@ -132,6 +135,8 @@ Some months it goes up. "See? Patience."
 This teaches delayed gratification better than any allowance system. They're not saving because you told them to. They're saving because they can *see* it working.
 
 > My cousin's $5 is now worth $7. She tells everyone. She also refuses to spend it. The lesson landed.
+>
+> <cite>Stephane Bounmy</cite>
 
 ## Conclusion
 
@@ -146,9 +151,3 @@ A paper wallet with a few dollars of Bitcoin isn't just a gift. It's a lesson in
 You don't need to explain the blockchain. You don't need to debate monetary policy. You just need to hand them something that's *theirs* and let them watch what happens.
 
 **Key takeaway:** Stop explaining Bitcoin. Start gifting it.
-
----
-
-Ready to give a kid their first Bitcoin?
-
-<a href="https://hongbaob.tc" target="_blank" rel="noopener noreferrer">Create a paper wallet with Hongbao</a> - beautiful designs that make the gift special.

@@ -1,0 +1,41 @@
+<% variant ||= :default %>
+<%
+  cta_config = case variant.to_sym
+  when :kids
+    {
+      title: "Ready to give a kid their first Bitcoin?",
+      description: "Create a beautiful paper wallet they can hold, keep safe, and watch grow over time.",
+      button_text: "Create a Paper Wallet"
+    }
+  when :gift
+    {
+      title: "Give Bitcoin, not another gift card",
+      description: "Paper wallets make Bitcoin tangible. No app needed. Just a beautiful gift they'll remember.",
+      button_text: "Design Your Gift"
+    }
+  else
+    {
+      title: "Start gifting Bitcoin today",
+      description: "Hongbao makes it easy to create beautiful paper wallets. No crypto experience needed.",
+      button_text: "Create Your First Wallet"
+    }
+  end
+%>
+
+<div class="not-prose my-16 py-12 px-8 bg-base-200 rounded-2xl">
+  <div class="max-w-2xl mx-auto text-center">
+    <h3 class="text-2xl md:text-3xl font-bold text-base-content mb-4">
+      <%= cta_config[:title] %>
+    </h3>
+    <p class="text-base-content/70 text-lg mb-8">
+      <%= cta_config[:description] %>
+    </p>
+    <%= link_to "https://hongbaob.tc",
+        class: "inline-flex items-center gap-2 px-8 py-4 bg-primary text-primary-content font-semibold rounded-full hover:opacity-90 transition-opacity",
+        target: "_blank",
+        rel: "noopener noreferrer" do %>
+      <%= cta_config[:button_text] %>
+      <%= heroicon "arrow-right", variant: :mini, class: "w-5 h-5" %>
+    <% end %>
+  </div>
+</div>
