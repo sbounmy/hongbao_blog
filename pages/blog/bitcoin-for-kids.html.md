@@ -68,6 +68,8 @@ No wonder Gen Z figured out the game is rigged. Many are already turning to cryp
 
 Bitcoin flips the script. Limited supply. No one can print more. Over time, it tends to go up - not because of speculation, but because of math.
 
+<coingecko-coin-price-chart-widget coin-id="bitcoin" currency="usd" height="300" locale="en"></coingecko-coin-price-chart-widget>
+
 ## Paper wallets: making Bitcoin real for kids
 
 Here's the problem with digital Bitcoin: kids can't touch it. It's just numbers on a screen. No different from a video game score.
@@ -102,6 +104,8 @@ That last part is crucial. It teaches responsibility. Real stakes. No "Mom, can 
 
 Don't overthink this. The goal isn't to make them rich. It's to teach them.
 
+![Teaching kids to HODL Bitcoin - child saving Bitcoin paper wallet for the future](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hodl.webp)
+
 | Age   | Suggested Amount | Why                                                                                |
 | ----- | ---------------- | ---------------------------------------------------------------------------------- |
 | 5-7   | $5               | Concept introduction. "This is worth 5 dollars, but it might be worth more later!" |
@@ -113,7 +117,10 @@ Don't overthink this. The goal isn't to make them rich. It's to teach them.
 
 The amount doesn't matter as much as the lesson. $5 that doubles teaches the same thing as $500 that doubles.
 
-![Teaching kids to HODL Bitcoin - child saving Bitcoin paper wallet for the future](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hodl.webp)
+<div class="not-prose my-8">
+  <iframe src="/simulations/embed" width="100%" height="820" frameborder="0" style="border-radius: 12px; overflow: hidden;" loading="lazy"></iframe>
+</div>
+
 
 ## The HODL lesson
 
