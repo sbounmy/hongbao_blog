@@ -4,13 +4,13 @@ title: "Bitcoin for Kids: How to Teach Children About Money with Satoshis"
 description: "Teach kids about Bitcoin with paper wallets. A hands-on guide for parents who want to give their children a real financial education."
 date: 2026-01-15
 author: Stephane Bounmy
-image: https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hero.png
+image: https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hero.webp
 cta_variant: kids
 ---
 
 My 8-year-old cousin asked "What's Bitcoin?" I handed her a paper wallet worth $5. She gets it now.
 
-![How to teach kids about Bitcoin - child receiving a Bitcoin paper wallet gift](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hero.png)
+![How to teach kids about Bitcoin - child receiving a Bitcoin paper wallet gift](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hero.webp)
 
 ## En bref
 
@@ -64,7 +64,7 @@ By the time they're adults, their "savings" buy almost half of what they could h
 
 No wonder Gen Z figured out the game is rigged. Many are already turning to crypto as an alternative.
 
-![Bitcoin vs traditional savings - piggy bank losing value to inflation compared to Bitcoin](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/piggybank.png)
+![Bitcoin vs traditional savings - piggy bank losing value to inflation compared to Bitcoin](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/piggybank.webp)
 
 Bitcoin flips the script. Limited supply. No one can print more. Over time, it tends to go up - not because of speculation, but because of math.
 
@@ -113,7 +113,7 @@ Don't overthink this. The goal isn't to make them rich. It's to teach them.
 
 The amount doesn't matter as much as the lesson. $5 that doubles teaches the same thing as $500 that doubles.
 
-![Teaching kids to HODL Bitcoin - child saving Bitcoin paper wallet for the future](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hodl.png)
+![Teaching kids to HODL Bitcoin - child saving Bitcoin paper wallet for the future](https://cdn.hongbaob.tc/blog/bitcoin-for-kids/hodl.webp)
 
 ## The HODL lesson
 
